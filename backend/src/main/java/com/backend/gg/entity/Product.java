@@ -4,12 +4,15 @@ import com.backend.gg.enums.Category;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity
+import java.math.BigDecimal;
+import java.util.List;
+
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 @Table(name = "product")
 public class Product {
 
@@ -19,11 +22,10 @@ public class Product {
     private String name;
     private String description;
     private int stock;
-    private double price;
+    private BigDecimal price;
     private String image;
     private boolean active;
+
+    @Enumerated(EnumType.STRING)
     private Category category;
-    @ManyToOne
-    @JoinColumn(name = "order_detail_id")
-    private OrderDetail orderDetail;
 }

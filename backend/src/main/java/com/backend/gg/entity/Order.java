@@ -5,28 +5,36 @@ import com.backend.gg.security.entity.User;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
-@Entity
+
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 @Table(name = "order")
 public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Temporal(TemporalType.TIMESTAMP)
     private Date orderDate;
+    private BigDecimal total;
+
+    @Enumerated(EnumType.STRING)
+    private Status status;
 
     @ManyToOne
-    @JoinColumn (name = "user_id")
+    @JoinColumn(name = "user_id", nullable = false, foreignKey = @ForeignKey(name= "FK_Order_User"))
     private User user;
-    @OneToOne
-    @JoinColumn (name = "orden_detail_id")
-    private OrderDetail detail;
-    private double total;
-    private Status status;
+
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<OrderDetail> details;
+
 }
