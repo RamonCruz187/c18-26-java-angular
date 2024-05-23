@@ -15,10 +15,14 @@ body {
     height: 200px;
     width: 1200px;
     color: white;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
     margin: 0 auto; /* Centra horizontalmente el banner2 */
 }
+
 
 .categorias {
     display: flex;
@@ -50,6 +54,9 @@ body {
     width: 100%;
     height: 86px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 5px;
     position: absolute;
     bottom: 0;
@@ -57,12 +64,10 @@ body {
     box-sizing: border-box; /* Asegura que el padding no incremente el tamaño total */
 }
 
-.titulo{
+.titulo {
     font-size: 32px;
     text-align: center;
-
 }
-
 
 .llegados {
     display: flex;
@@ -79,7 +84,7 @@ body {
     margin: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Alinea el texto a la izquierda */
     justify-content: space-between;
     padding: 10px;
     position: relative;
@@ -87,19 +92,64 @@ body {
     width: 358px;
     border: 3px solid #D72323;
     border-radius: 30px;
-
 }
 
 .nombre2 {
+    background-color: rgba(0, 0, 255, 0.39);
     color: rgb(0, 0, 0);
     font-family: Poppins;
     font-size: 32px;
     width: 100%;
-    height: 40%px;
-    text-align: center;
+    text-align: left; /* Alinea el texto a la izquierda */
     padding: 5px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    box-sizing: border-box; /* Asegura que el padding no incremente el tamaño total */
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 30%;
+    }
+    
+
+
+input[type="button"] {
+    border-radius: 15px;
+    background-color: #D72323;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.servicios {
+    display: flex;
+    justify-content: space-between;
+    padding: 470px;
+    padding-top: 0px;
+    margin: 0 auto; /* Centra horizontalmente el contenedor de servicios */
+}
+
+.servi {
+    flex: 1;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2.5px solid #960404; /* Borde negro */
+    border-radius: 50%; /* Hace que el div sea un círculo */
+    text-align: center; /* Centra el texto */
+    position: relative;
+    height: 100px;
+    width: 100px;
+}
+
+.servi .nombre {
+    background-color: transparent;
+    position: static; /* Elimina la posición absoluta */
+    font-size: 24px;
+    padding: 5px;
     box-sizing: border-box; /* Asegura que el padding no incremente el tamaño total */
 }
