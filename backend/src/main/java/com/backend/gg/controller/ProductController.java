@@ -59,9 +59,9 @@ public class ProductController {
 
         boolean removed = productService.deleteProduct(id);
         if(removed) {
-            return new ResponseEntity<>("El producto fue borrado exitosamente", HttpStatus.OK);
+            return new ResponseEntity<>("the product was deleted", HttpStatus.OK);
         } else {
-        return new ResponseEntity<>("El producto con ese id no existe", HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>("the product with that id does not exist ", HttpStatus.NOT_FOUND);
     }
     }
 }
