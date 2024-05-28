@@ -7,7 +7,7 @@ import com.backend.gg.entity.OrderDetail;
 import com.backend.gg.enums.Status;
 import com.backend.gg.repository.OrderDetailRepository;
 import com.backend.gg.repository.ProductRepository;
-import com.backend.gg.repository.UserRepository;
+import com.backend.gg.security.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
