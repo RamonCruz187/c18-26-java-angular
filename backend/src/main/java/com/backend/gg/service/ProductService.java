@@ -15,4 +15,5 @@ public interface ProductService {
     public ProductDTO createProduct(ProductDTO productDTO);
     
     public boolean deleteProduct(Long id);
+
 }

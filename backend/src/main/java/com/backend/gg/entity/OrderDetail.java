@@ -20,15 +20,17 @@ public class OrderDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private int quantity;
-
-    @Column(name = "unit_price")
-    private BigDecimal unitPrice;
-    private BigDecimal subtotal;
 
     @ManyToOne
     @JoinColumn(name = "product_id", nullable = false, foreignKey = @ForeignKey(name= "FK_OrderDetail_Product"))
     private Product product;
+
+    private int quantity;
+
+    @Column(name = "unit_price")
+    private double unitPrice;
+
+    private BigDecimal subtotal;
 
     @ManyToOne
     @JoinColumn(name = "order_id", foreignKey = @ForeignKey(name= "FK_OrderDetail_Order"))

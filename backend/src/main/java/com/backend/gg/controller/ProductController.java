@@ -1,4 +1,3 @@
-
 package com.backend.gg.controller;
 
 import com.backend.gg.dto.ProductDTO;
@@ -19,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/products")
 public class ProductController {
-    
+
     @Autowired
     ProductService productService;
     
@@ -30,11 +29,12 @@ public class ProductController {
         
         if(productDTO != null){
             return new ResponseEntity<>(productDTO, HttpStatus.OK);
+
         } else {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
     }
-    
+
     @GetMapping("/{id}")
     public ResponseEntity getProduct(@PathVariable Long id){
         
@@ -42,11 +42,12 @@ public class ProductController {
         
          if(productDTO != null){
                 return new ResponseEntity<>(productDTO, HttpStatus.OK);
+
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
-    
+
     @PostMapping("/create")
     public ResponseEntity createProduct(@RequestBody ProductDTO productDTO){
 
@@ -54,7 +55,7 @@ public class ProductController {
         
        return new ResponseEntity<>(productDTO,HttpStatus.OK);    
     }
-    
+
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> deleteProduct(@PathVariable Long id){
 
@@ -62,7 +63,7 @@ public class ProductController {
         if(removed) {
             return new ResponseEntity<>("the product was deleted", HttpStatus.OK);
         } else {
-        return new ResponseEntity<>("the product with that id does not exist ", HttpStatus.NOT_FOUND);
-    }
+            return new ResponseEntity<>("the product with that id does not exist ", HttpStatus.NOT_FOUND);
+        }
     }
 }

@@ -1,4 +1,3 @@
-
 package com.backend.gg.service;
 
 import com.backend.gg.dto.ProductDTO;
@@ -12,9 +11,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ProductServiceImpl implements ProductService {
-    
+
     @Autowired
     private ProductRepository productRepo;
+
     @Autowired
     private ProductMapper productMapper;
     
@@ -39,18 +39,20 @@ public class ProductServiceImpl implements ProductService {
         return productMapper.toProductDTO(product);
     }
 
+    
+
     @Override
     public boolean deleteProduct(Long id) {
-        
-    Optional<Product> product = productRepo.findById(id);
 
-    if (product.isPresent()) {
-        productRepo.deleteById(id);
-        return true;
-    } else {
-        return false;
+        Optional<Product> product = productRepo.findById(id);
+
+        if (product.isPresent()) {
+            productRepo.deleteById(id);
+            return true;
+        } else {
+            return false;
+        }
     }
-    }
-    
-    
+
+
 }
