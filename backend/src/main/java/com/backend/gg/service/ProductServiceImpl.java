@@ -1,7 +1,9 @@
 
 package com.backend.gg.service;
 
+import com.backend.gg.dto.ProductDTO;
 import com.backend.gg.entity.Product;
+import com.backend.gg.mapper.ProductMapper;
 import com.backend.gg.repository.ProductRepository;
 import java.util.List;
 import java.util.Optional;
@@ -13,21 +15,28 @@ public class ProductServiceImpl implements ProductService {
     
     @Autowired
     private ProductRepository productRepo;
+    @Autowired
+    private ProductMapper productMapper;
     
-    public List<Product> getAllProducts(){
+    @Override
+    public List<ProductDTO> getAllProducts(){
         
-       return productRepo.findAll();
+       return productMapper.convertToListDto(productRepo.findAll());
     }
     
-    public Product getProduct(Long id){
+    @Override
+    public ProductDTO getProduct(Long id){
         
-        return productRepo.findById(id).orElse(null);
+        return productMapper.toProductDTO(productRepo.findById(id).orElse(null));
     }
 
     @Override
-    public void createProduct(Product product) {
+    public ProductDTO createProduct(ProductDTO productDTO) {
         
-        productRepo.save(product);
+        Product product = productMapper.toProductSet(productDTO);
+        
+        product = productRepo.save(product);
+        return productMapper.toProductDTO(product);
     }
 
     @Override
