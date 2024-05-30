@@ -3,9 +3,14 @@ package com.backend.gg.service;
 import com.backend.gg.entity.Order;
 import com.backend.gg.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -18,8 +23,16 @@ public class OrderServiceImpl implements OrderService{
     }
 
     @Override
-    public Optional<Order> get(Long id) {
-        return Optional.empty();
+    public Order get(Long id) {
+
+        return orderRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public List<Order> findOrdersByDate(LocalDate date) {
+        LocalDateTime startOfDay = date.atStartOfDay();
+        LocalDateTime endOfDay = date.atTime(LocalTime.MAX);
+        return orderRepository.findAllByOrderDateBetween(startOfDay, endOfDay) ;
     }
 
     @Override
