@@ -4,10 +4,12 @@ import com.backend.gg.dto.CartDto;
 import com.backend.gg.dto.OrderDetailDto;
 import com.backend.gg.entity.Order;
 import com.backend.gg.entity.OrderDetail;
+import com.backend.gg.entity.Product;
 import com.backend.gg.enums.Status;
 import com.backend.gg.repository.OrderDetailRepository;
 import com.backend.gg.repository.ProductRepository;
 import com.backend.gg.security.repository.UserRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
@@ -23,22 +25,36 @@ public class OrderDetailServiceImpl implements OrderDetailService{
     final ProductRepository productRepository;
     final UserRepository userRepository;
 
+    @Transactional
     public Order processNewCart(CartDto cartDto, Long id){
         Order order = new Order();
         List<OrderDetailDto> orderDetail = cartDto.getOrderDetailDtos();
+
+        //verificamos stock
+
+
         List<OrderDetail> ordersDetail = orderDetail.stream().map(orderDetailDto -> {
+
             OrderDetail detail = new OrderDetail();
             detail.setOrder(order);
             detail.setProduct(productRepository.getProductById(orderDetailDto.getProduct_id()));
             detail.setQuantity(orderDetailDto.getQuantity());
             detail.setUnitPrice(orderDetailDto.getUnitPrice());
+
+            //se modifica el stock de cada order-detail
+            Product product = productRepository.getProductById(orderDetailDto.getProduct_id());
+            int stock = productRepository.getProductById(orderDetailDto.getProduct_id()).getStock();
+            int quantity = detail.getQuantity();
+            product.setStock(stock - quantity);
+            productRepository.save(product);
+
             detail.setSubtotal(BigDecimal.valueOf(orderDetailDto.getUnitPrice() * orderDetailDto.getQuantity()));
             return detail;
 
         }).toList();
         BigDecimal total = ordersDetail.stream().map(OrderDetail::getSubtotal).reduce(BigDecimal.ZERO, BigDecimal::add);
         order.setOrderDate(LocalDateTime.now());
-        order.setTotal(total);
+        order.setTotal(cartDto.getShippingCost().add(total));
         order.setStatus(Status.COMPLETED);
         order.setUser(userRepository.getUserById(id));
         order.setDetails(ordersDetail);

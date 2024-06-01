@@ -1,5 +1,6 @@
 package com.backend.gg.controller;
 
+import com.backend.gg.dto.ProductDTO;
 import com.backend.gg.entity.Product;
 import com.backend.gg.service.ProductService;
 import java.util.List;
@@ -15,42 +16,44 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/products")
+@RequestMapping(value = "/products")
 public class ProductController {
 
     @Autowired
     ProductService productService;
+    
+    @GetMapping("/all")
+    public ResponseEntity getAllProducts(){
 
-    @GetMapping("/products")
-    public ResponseEntity<List<Product>> getAllProducts(){
+        List<ProductDTO> productDTO = productService.getAllProducts();
+        
+        if(productDTO != null){
+            return new ResponseEntity<>(productDTO, HttpStatus.OK);
 
-        List<Product> products = productService.getAllProducts();
-
-        if(products.isEmpty()){
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } else {
-            return new ResponseEntity<>(products, HttpStatus.OK);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Product> getProduct(@PathVariable Long id){
+    public ResponseEntity getProduct(@PathVariable Long id){
+        
+        ProductDTO productDTO = productService.getProduct(id);
+        
+         if(productDTO != null){
+                return new ResponseEntity<>(productDTO, HttpStatus.OK);
 
-        Product product = productService.getProduct(id);
-
-        if(product != null){
-            return new ResponseEntity<>(product, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 
     @PostMapping("/create")
-    public ResponseEntity<Product> createProduct(@RequestBody Product product){
+    public ResponseEntity createProduct(@RequestBody ProductDTO productDTO){
 
-        productService.createProduct(product);
-
-        return new ResponseEntity<>(product,HttpStatus.OK);
+        productService.createProduct(productDTO);
+        
+       return new ResponseEntity<>(productDTO,HttpStatus.OK);    
     }
 
     @DeleteMapping("/delete/{id}")
