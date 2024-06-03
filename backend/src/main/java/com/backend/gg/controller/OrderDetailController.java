@@ -23,8 +23,14 @@ public class OrderDetailController {
     @PostMapping("/cart/{id}")
     public ResponseEntity<?> newCart (@RequestBody @Valid CartDto cartDto, @PathVariable Long id){
         try {
-            orderDetailService.processNewCart(cartDto, id);
-            return new ResponseEntity<>(HttpStatus.OK);
+            if (orderDetailService.stockControl(cartDto)){
+                orderDetailService.processNewCart(cartDto, id);
+                return new ResponseEntity<>(HttpStatus.OK);
+
+            }else {
+                return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
+            }
+
         } catch (EntityNotFoundException e) {
             return new ResponseEntity<>("Entity not found: " + e.getMessage(), HttpStatus.NOT_FOUND);
         } catch (IllegalArgumentException e) {

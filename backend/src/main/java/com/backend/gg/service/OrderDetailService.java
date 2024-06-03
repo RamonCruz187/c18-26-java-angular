@@ -9,6 +9,8 @@ import java.util.Optional;
 public interface OrderDetailService {
 
     public Order processNewCart(CartDto cartDto, Long id);
+
+    public boolean stockControl (CartDto cartDto);
     void save (OrderDetail orderDetail);
 
     void delete(Long id);

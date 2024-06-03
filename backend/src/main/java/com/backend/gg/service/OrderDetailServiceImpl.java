@@ -27,12 +27,9 @@ public class OrderDetailServiceImpl implements OrderDetailService{
 
     @Transactional
     public Order processNewCart(CartDto cartDto, Long id){
+
         Order order = new Order();
         List<OrderDetailDto> orderDetail = cartDto.getOrderDetailDtos();
-
-        //verificamos stock
-
-
         List<OrderDetail> ordersDetail = orderDetail.stream().map(orderDetailDto -> {
 
             OrderDetail detail = new OrderDetail();
@@ -62,6 +59,21 @@ public class OrderDetailServiceImpl implements OrderDetailService{
         orderService.save(order);
         orderDetailRepository.saveAll(ordersDetail);
         return order;
+    }
+
+    @Override
+    public boolean stockControl(CartDto cartDto) {
+        List<OrderDetailDto> orderDetailDtoList = cartDto.getOrderDetailDtos();
+
+        for (OrderDetailDto orderDetailDto : orderDetailDtoList){
+            Product product = productRepository.getProductById(orderDetailDto.getProduct_id());
+
+            if (product.getStock()< orderDetailDto.getQuantity()){
+                return false;
+            }
+        }
+
+        return true;
     }
 
     @Override
