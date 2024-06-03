@@ -1,9 +1,11 @@
 package com.backend.gg.controller;
 
 import com.backend.gg.dto.ProductDTO;
+import com.backend.gg.dto.ProductRequestUpdateDTO;
 import com.backend.gg.entity.Product;
 import com.backend.gg.service.ProductService;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -51,10 +54,23 @@ public class ProductController {
     @PostMapping("/create")
     public ResponseEntity createProduct(@RequestBody ProductDTO productDTO){
 
-        productService.createProduct(productDTO);
+       productService.createProduct(productDTO);
         
        return new ResponseEntity<>(productDTO,HttpStatus.OK);    
     }
+    
+       @PutMapping("/edit/{id}")
+    public ResponseEntity editProduct(@PathVariable Long id, @RequestBody ProductRequestUpdateDTO productDTO){
+
+       ProductRequestUpdateDTO updatedProduct = productService.update(id, productDTO);
+        
+        if (updatedProduct != null) {
+            return ResponseEntity.ok(updatedProduct);
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Producto no encontrado");
+        }
+    }
+
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> deleteProduct(@PathVariable Long id){
