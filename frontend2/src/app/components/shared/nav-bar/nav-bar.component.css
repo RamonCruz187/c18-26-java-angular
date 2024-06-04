@@ -1,0 +1,159 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Aquí aplico el efecto de sombra */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+
+    width: 127px;
+    left: 323px;
+
+    text-align: center;
+
+}
+
+.nav-item a:hover {
+    background-color: #f0e9e9;
+    border-radius: 4px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 4px;
+}
+
+.dropdown-menu-right {
+    right: 0;
+    left: auto;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    padding: 10px 15px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f5f5f5;
+}
+
+
+.nav-item:hover .dropdown-menu,
+.icon-item:hover .dropdown-menu {
+    display: block;
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 5px 10px;
+    margin-right: 20px;
+
+
+box-sizing: border-box;
+
+width: 462px;
+height: 40px;
+left: 877px;
+top: 22px;
+
+background: #FFFFFF;
+border: 2px solid #000000;
+border-radius: 45px;
+
+    
+}
+
+.search-icon {
+    color: #333;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    width: 200px;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.icon-item {
+    position: relative;
+    margin-right: 30px;
+    margin-left: 40px;
+
+    cursor: pointer;
+}
+
+.icon-item .fas {
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .search-container {
+        flex: 1;
+        margin-right: 10px;
+    }
+}
