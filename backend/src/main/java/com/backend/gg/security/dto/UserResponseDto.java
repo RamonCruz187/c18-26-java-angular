@@ -1,6 +1,7 @@
 package com.backend.gg.security.dto;
 
 import com.backend.gg.entity.Order;
+import com.backend.gg.security.entity.RoleName;
 import jakarta.persistence.Column;
 import lombok.*;
 
@@ -19,4 +20,5 @@ public class UserResponseDto {
     private String email;
     private String phone;
     private String address;
+    private RoleName role;
 }

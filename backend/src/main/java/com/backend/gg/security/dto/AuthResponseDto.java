@@ -1,2 +1,14 @@
-package com.backend.gg.security.dto;public class AuthResponseDto {
+package com.backend.gg.security.dto;
+
+import lombok.*;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class AuthResponseDto {
+
+    private String jwt;
+    private UserResponseDto user;
 }
