@@ -16,6 +16,7 @@ public class ProductMapper {
             .description(productDTO.getDescription())
             .stock(productDTO.getStock())
             .price(productDTO.getPrice())
+            .active(productDTO.isActive())
             .image(productDTO.getImage())
             .coleccionable(productDTO.getColeccionable())
             .juguete(productDTO.getJuguete())
@@ -30,6 +31,7 @@ public class ProductMapper {
             .stock(product.getStock())
             .price(product.getPrice())
             .image(product.getImage())
+            .active(product.isActive())
             .coleccionable(product.getColeccionable())
             .juguete(product.getJuguete())
             .build();

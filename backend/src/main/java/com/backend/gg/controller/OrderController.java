@@ -3,7 +3,6 @@ package com.backend.gg.controller;
 import com.backend.gg.dto.OrderResponseDto;
 import com.backend.gg.entity.Order;
 import com.backend.gg.mapper.OrderMapper;
-import com.backend.gg.repository.OrderRepository;
 import com.backend.gg.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -12,11 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/v1")
@@ -25,7 +20,6 @@ public class OrderController {
 
     private final OrderService orderService;
     private final OrderMapper orderMapper;
-    private final OrderRepository orderRepository;
     @GetMapping("/get/order/{id}")
     public ResponseEntity<?> getOrderById(@PathVariable Long id){
         try {
