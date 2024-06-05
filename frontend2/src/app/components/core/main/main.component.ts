@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpServiceService } from 'src/app/services/http-service.service';
 
 @Component({
   selector: 'app-main',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor(private data:HttpServiceService) { }
 
   ngOnInit(): void {
-  }
+    this.data.getData().subscribe(data => {
+      console.log(data);
+  });
 
-}
+}}

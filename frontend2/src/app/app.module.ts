@@ -8,6 +8,11 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { NavBarComponent } from './components/shared/nav-bar/nav-bar.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
+import { ProductComponent } from './components/product/product.component';
+import { CartComponent } from './components/cart/cart.component';
+import { PayComponent } from './components/pay/pay.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import {  HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,10 +21,15 @@ import { RegisterComponent } from './components/auth/register/register.component
     FooterComponent,
     NavBarComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProductComponent,
+    CartComponent,
+    PayComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
