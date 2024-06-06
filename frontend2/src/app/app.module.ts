@@ -14,6 +14,7 @@ import { PayComponent } from './components/pay/pay.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import {  HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CatalogoComponent } from './components/catalogo/catalogo.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProductComponent,
     CartComponent,
     PayComponent,
-    ProfileComponent
+    ProfileComponent,
+    CatalogoComponent
   ],
   imports: [
     BrowserModule,
