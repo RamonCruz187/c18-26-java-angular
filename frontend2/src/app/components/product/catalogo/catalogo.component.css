@@ -1,21 +1,24 @@
 *{
     margin:0;
     padding:0;
-    box-sizing: border-box;   
-
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
 }
 .banner{    
     margin-top: 0px;
     width: 1440px ;
     height: 150px ;       
-    background: radial-gradient(ellipse at center,#d72323 0%,#551010 100%);
+    background: radial-gradient(ellipse 600px 100px at 50% 100% ,#d72323 0%,#551010 100%);
+    
 }
 .titulo{
     padding-top: 80px;
     text-align: center;
     color: #FFFFFF;
     font-family: "Poppins", sans-serif;;
-    font:bold;
+    font-weight: 500;
     font-size: 40px;      
     
 }
@@ -26,14 +29,16 @@
 }
 
 .container{
-    margin-top: 100px;
+    margin-top: 80px;
     
 }
 .volver{
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 15px;
+    margin-left: 60px;
     font-family: "Poppins", sans-serif;;
     color: #861919;
+    font-size: 15px;
+    
 }
 div[class^='item']{
    
@@ -45,19 +50,32 @@ div[class^='item']{
     border-radius: 5px ;
     background-color: #FFE7E7;
     margin :10px ;    
-    box-shadow: 2px 2px 7px 1px #aca9a9; 
+    box-shadow: 0px 1px 10px  #aca9a9; 
+    cursor:default;
+    transition: all 400ms ease;
+    
+}
+div[class^='item']:hover{
+    box-shadow: 5px 5px 20px  #828181;
+    transform: translateY(-3%);
+}
+.card img{
+    width:85%;
+    margin-bottom: 0px;
+    margin-left: 5px;
 }
 .nombre2 .name {
     padding-left: 10px;
-    margin-top: 20%;
+    margin-top: 10%;
     margin-right: 50%;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 14px;
+
 }
 .nombre2{
-    margin-top: 50%;
+    margin-top: 10%;
 }
 .nombre2 .precio {
   
@@ -78,10 +96,15 @@ input[type="button"] {
     font-size: 16px;
     margin-top: 30px;
     font-family: "Poppins", sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     font-style: normal;
     padding-left: 30px;
     padding-right: 30px;
+    cursor:default;
+    transition: all 400ms ease;
+}
+input[type="button"]:hover{
+    background-color: #912020;
 }
 .circulo{
 
@@ -96,11 +119,13 @@ input[type="button"] {
     border-radius: 200px;
     justify-content: center;
     
+    
 }
 .flex2{
    
     display: flex;
     justify-content:center;
+    margin-bottom: 50px;
 
     
 }
@@ -110,7 +135,8 @@ input[type="button"] {
     height: 30px;
     text-align: center;
     border-radius: 100px;
-    border: 3px solid #d72323;
+    border: 2px solid #d72323;
+    box-sizing: border-box;
     
 }
 
