@@ -1,0 +1,120 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;   
+
+}
+.banner{    
+    margin-top: 0px;
+    width: 1440px ;
+    height: 150px ;       
+    background: radial-gradient(ellipse at center,#d72323 0%,#551010 100%);
+}
+.titulo{
+    padding-top: 80px;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;;
+    font:bold;
+    font-size: 40px;      
+    
+}
+.flex{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container{
+    margin-top: 100px;
+    
+}
+.volver{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: "Poppins", sans-serif;;
+    color: #861919;
+}
+div[class^='item']{
+   
+    width: 255px;
+    height: 383px;
+    font-size: 40px;
+    padding: 10px;
+    box-sizing: border-box;    
+    border-radius: 5px ;
+    background-color: #FFE7E7;
+    margin :10px ;    
+    box-shadow: 2px 2px 7px 1px #aca9a9; 
+}
+.nombre2 .name {
+    padding-left: 10px;
+    margin-top: 20%;
+    margin-right: 50%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+}
+.nombre2{
+    margin-top: 50%;
+}
+.nombre2 .precio {
+  
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: bold;
+    font-size: 24px;
+    color: #000000;
+    padding-left: 10px;
+}
+input[type="button"] {
+    border-radius: 30px;
+    background-color: #D72323;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.circulo{
+
+    padding-top: 5px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background-color: #D72323;
+    color:#f9f8f8;
+    box-sizing: border-box;
+    border-color: #d72323;
+    border-radius: 200px;
+    justify-content: center;
+    
+}
+.flex2{
+   
+    display: flex;
+    justify-content:center;
+
+    
+}
+.circulo1{
+    
+    padding-top: 3px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 100px;
+    border: 3px solid #d72323;
+    
+}
+
+
+
+

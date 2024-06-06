@@ -1,0 +1,409 @@
+/* Estilo general para sombras */
+.banner, .banner2, .categoria, .llegado, .servi {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Estilo para el banner principal */
+.banner {
+    background: linear-gradient(45deg, #D72323, #551010);
+    height: 324px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+background: radial-gradient(70.66% 123.48% at 49.81% 123.48%, #D72323 0%, #551010 100%);
+margin-bottom: 60px;
+
+}
+
+/* Estilo para el segundo banner */
+.banner2 {
+    background-color: #D72323;
+    height: 200px;
+    width: 100%;
+    max-width: 1200px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+margin-bottom: 40px;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+}
+
+/* Estilo para la sección de introducción */
+.intro h1 {
+    font-size: 75px;
+    color: #D72323;
+    margin-bottom: -5px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.intro h2 {
+    font-size: 30px;
+    margin-top: 20px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: -30px;
+}
+
+.intro h2 span{
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Estilo para el contenedor de categorías */
+.categorias {
+    display: flex;
+    justify-content: space-between;
+    padding: 90px 90px 0 90px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+    margin-bottom: 10px;
+}
+
+/* Estilo para cada categoría individual */
+.categoria {
+    background-color: #FF6C6C;
+    flex: 1 1 299px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    position: relative;
+    height: 436px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.categoria img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%) sepia(100%) hue-rotate(-50deg) saturate(300%) brightness(100%);
+    transition: filter 0.3s;
+}
+
+.categoria:hover img {
+    filter: none;
+}
+
+.nombre {
+    background-color: #861919;
+    color: white;
+    font-size: 32px;
+    width: 100%;
+    height: 86px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para los títulos */
+.titulo {
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 40px;
+/* or 125% */
+
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+}
+
+/* Estilo para los llegados */
+.llegados {
+    display: flex;
+    padding: 0 250px 50px 250px;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+
+/* Estilo para cada elemento llegado */
+.llegado {
+    background-color: #FFE7E7;
+    flex: 1 1 358px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    height: 466px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    margin-bottom: 70px;
+
+}
+
+.llegado:hover {
+    transform: scale(1.03);
+}
+
+/* Estilo para la imagen dentro del div llegado */
+.llegado img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+.nombre2 {
+    margin-left: 20px;
+    color: #141416;
+    font-size: 16px;
+    width: 96%;
+    text-align: left;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 30%;
+
+
+}
+
+.nombre2 .name {
+    margin-right: 50%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.nombre2 .precio {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+    color: #D72323;
+}
+
+/* Estilo para botones */
+input[type="button"] {
+    border-radius: 30px;
+    background-color: #D72323;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* Estilo para el contenedor de servicios */
+.servicios {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 80px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Estilo para el contenedor de servicios */
+.servicios {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 480px; /* Reducción del padding */
+    margin: 0 auto; /* Centra horizontalmente */
+}
+
+/* Estilo para cada servicio */
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.servi {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border: 2.8px solid #960404;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.servi .nombre {
+    background-color: transparent;
+    font-size: 24px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.servi img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.servicio p {
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+text-align: center;
+
+color: #000000;
+
+
+}
+
+
+.nav-button {
+    border: none;
+    background-color: #D72323;
+    color: white;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 17%;
+}
+
+.nav-button:hover {
+    background-color: #b71b1b;
+}
+
+.prev {
+    left: -60px;
+}
+
+.next {
+    right: -60px;
+}
+
+.llegados {
+    display: flex;
+    position: relative;
+    padding: 0 250px 50px 250px;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+
+div .img{
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    width: 70%;
+    height: 70%;
+}
+
+/* Media Queries para adaptarse a diferentes tamaños de pantalla */
+@media (max-width: 1200px) {
+    .categorias, .llegados, .servicios {
+        padding: 0 50px;
+    }
+    .banner2 {
+        width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    .categorias, .llegados, .servicios {
+        padding: 0 30px;
+    }
+    .banner2 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .categorias, .llegados, .servicios {
+        padding: 0 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner2 {
+        width: 100%;
+    }
+    .nav-button {
+        margin-top: 10%;
+    }
+    .categoria, .llegado {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .categorias, .llegados, .servicios {
+        padding: 0 10px;
+    }
+    .banner2 {
+        width: 100%;
+    }
+    .nav-button {
+        margin-top: 5%;
+    }
+    .categoria, .llegado {
+        width: 100%;
+    }
+    .intro h1 {
+        font-size: 50px;
+    }
+    .intro h2 {
+        font-size: 24px;
+    }
+    .intro h2 span {
+        font-size: 24px;
+    }
+}
