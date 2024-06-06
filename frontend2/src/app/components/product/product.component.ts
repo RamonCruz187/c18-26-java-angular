@@ -7,14 +7,14 @@ import { HttpServiceService } from 'src/app/services/http-service.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent {
-  private idProduct: number = 4;
+  private idProduct: number = 6;
   private product: any;
 
   constructor(private data:HttpServiceService) { }
 
   ngOnInit(): void {
     this.data.getProduct(this.idProduct).subscribe(data => {
-      this.product=data[this.idProduct]
+      this.product=data
       console.log(this.product);
   });
 

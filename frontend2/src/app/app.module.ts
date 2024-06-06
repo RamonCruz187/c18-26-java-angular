@@ -13,6 +13,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { PayComponent } from './components/pay/pay.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import {  HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import {  HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],

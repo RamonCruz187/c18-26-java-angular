@@ -19,11 +19,20 @@ export class HttpServiceService {
 
   getProduct(id: number): Observable<any> {
     console.log("Producto funciona");
-    //return this.http.get('http://localhost:8080/products/'+id);
-    return this.http.get(this.dataUrl);
-
+    return this.http.get('http://localhost:8080/products/'+id);
+    //return this.http.get(this.dataUrl);
   }
 
-  
+  newUser(body: any): Observable<any> {
+    console.log("Registro funciona");
+    return this.http.post('http://localhost:8080/auth/register',body);
+    //return this.http.get(this.dataUrl);
+  }
+
+  login(body: any): Observable<any> {
+    console.log("Login funciona");
+    return this.http.post('http://localhost:8080/auth/login',body);
+    //return this.http.get(this.dataUrl);
+  }
 
 }

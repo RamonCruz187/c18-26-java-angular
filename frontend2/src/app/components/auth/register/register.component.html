@@ -1,1 +1,39 @@
-<p>register works!</p>
+<h1>--------------------------------</h1>
+<form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input id="name" formControlName="name" />
+      <div *ngIf="registroForm.get('nombre')?.invalid && registroForm.get('nombre')?.touched">
+        El nombre es obligatorio.
+      </div>
+    </div>
+  
+    <div>
+      <label for="apellido">Apellido:</label>
+      <input id="lastName" formControlName="lastName" />
+      <div *ngIf="registroForm.get('apellido')?.invalid && registroForm.get('apellido')?.touched">
+        El apellido es obligatorio.
+      </div>
+    </div>
+  
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" />
+      <div *ngIf="registroForm.get('email')?.invalid && registroForm.get('email')?.touched">
+        <div *ngIf="registroForm.get('email')?.errors?.['required']">El email es obligatorio.</div>
+        <div *ngIf="registroForm.get('email')?.errors?.['email']">El email no es válido.</div>
+      </div>
+    </div>
+  
+    <div>
+      <label for="password">Contraseña:</label>
+      <input id="password" type="password" formControlName="password" />
+      <div *ngIf="registroForm.get('password')?.invalid && registroForm.get('password')?.touched">
+        <div *ngIf="registroForm.get('password')?.errors?.['required']">La contraseña es obligatoria.</div>
+        <div *ngIf="registroForm.get('password')?.errors?.['minlength']">La contraseña debe tener al menos 6 caracteres.</div>
+      </div>
+    </div>
+  
+    <button type="submit">Registrar</button>
+  </form>
+  <h1>--------------------------------</h1>
