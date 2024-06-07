@@ -17,6 +17,13 @@ export class HttpServiceService {
 
   }
 
+  getCategory(category: any): Observable<any> {
+    console.log("elservicio funciona");
+    return this.http.get('http://localhost:8080/products/categoria/'+category);
+    //return this.http.get(this.dataUrl);
+
+  }
+
   getProduct(id: number): Observable<any> {
     console.log("Producto funciona");
     return this.http.get('http://localhost:8080/products/'+id);

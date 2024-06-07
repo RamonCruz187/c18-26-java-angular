@@ -15,6 +15,16 @@ import { ProfileComponent } from './components/profile/profile.component';
 import {  HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CatalogoComponent } from './components/catalogo/catalogo.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: '', component: MainComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'product/:id', component: ProductComponent },
+  { path: 'catalogo/:categoria', component: CatalogoComponent }
+];
+
 
 @NgModule({
   declarations: [
@@ -34,7 +44,8 @@ import { CatalogoComponent } from './components/catalogo/catalogo.component';
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
