@@ -8,16 +8,24 @@ import { HttpServiceService } from 'src/app/services/http-service.service';
   styleUrls: ['./catalogo.component.css']
 })
 export class CatalogoComponent {
-  product: any;
+  categoria: any;
+  productos: any[] = [];
 
   constructor(private route: ActivatedRoute, private data:HttpServiceService) { }
 
   ngOnInit(): void {
     // Recuperar el ID del producto de la ruta
-    const categoria = this.route.snapshot.paramMap.get('categoria');
-    console.log(categoria);
-    this.data.getCategory(categoria).subscribe(data => {
+    this.route.paramMap.subscribe(paramMAp => {
+    this.categoria = this.route.snapshot.paramMap.get('categoria');
+    console.log(this.categoria);
+    if (this.categoria){
+
+      this.data.getCategory(this.categoria).subscribe(data => {
+        this.productos=data;
       console.log(data);
+    
+    
   });
   }
-}
+});
+  }}

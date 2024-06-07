@@ -17,6 +17,7 @@ coleccionables: any;
   viewDetails(categoria: any) {
     console.log(categoria);
     this.router.navigate(['/catalogo', categoria]);
+    
   }
 
 }
