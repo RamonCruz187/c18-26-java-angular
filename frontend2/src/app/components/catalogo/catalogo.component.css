@@ -6,7 +6,7 @@
 }
 .banner{    
     margin-top: 0px;
-    width: 1440px ;
+    width: auto ;
     height: 150px ;       
     background: radial-gradient(ellipse at center,#d72323 0%,#551010 100%);
 }
@@ -15,7 +15,7 @@
     text-align: center;
     color: #FFFFFF;
     font-family: "Poppins", sans-serif;;
-    font:bold;
+    font-weight:bolder;
     font-size: 40px;      
     
 }
@@ -26,14 +26,21 @@
 }
 
 .container{
-    margin-top: 100px;
+    margin-top: 90px;    
     
 }
 .volver{
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 60px;    
     font-family: "Poppins", sans-serif;;
     color: #861919;
+    display: flex;    
+    justify-content: flex-start;
+}
+.filter{
+    margin-right: 80px;
+    display: flex;
+    justify-content: flex-end;    
 }
 div[class^='item']{
    
@@ -45,28 +52,42 @@ div[class^='item']{
     border-radius: 5px ;
     background-color: #FFE7E7;
     margin :10px ;    
-    box-shadow: 2px 2px 7px 1px #aca9a9; 
+    box-shadow: 0px 1px 10px  #aca9a9; 
+    cursor:default;
+    transition: all 400ms ease;
+    
 }
-.nombre2 .name {
+div[class^='item']:hover{
+    box-shadow: 5px 5px 20px  #828181;
+    transform: translateY(-3%);
+}
+.card img{
+    
+    width:85%;
+    margin-bottom: 0px;
+    margin-left: 5px;
+}
+
+.descripcion{
+    margin-top: 10%;
+}
+.name {
+
     padding-left: 10px;
-    margin-top: 20%;
+    margin-top: 10%;
     margin-right: 50%;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 14px;
+    font-family: "Poppins", sans-serif;    
+    font-size: 15px;
 }
-.nombre2{
-    margin-top: 50%;
-}
-.nombre2 .precio {
+.precio {
   
     font-family: "Poppins", sans-serif;
-    font-weight: 500;
     font-style: bold;
-    font-size: 24px;
+    font-size: 14px;
     color: #000000;
-    padding-left: 10px;
+    padding-left: 14px;
+    font-weight: bold;
+ 
 }
 input[type="button"] {
     border-radius: 30px;
@@ -76,13 +97,19 @@ input[type="button"] {
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 30px;
+    margin-top: 20px;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
     padding-left: 30px;
-    padding-right: 30px;
+    padding-right: 30px;    
+    transition: background-color 0.3s ease;
 }
+input[type="button"]:hover{
+    background-color: #861919
+}
+
+
 .circulo{
 
     padding-top: 5px;
@@ -113,6 +140,16 @@ input[type="button"] {
     border-radius: 100px;
     border: 3px solid #d72323;
     
+}
+#espacio1{
+    transform: rotate(180deg);
+    margin-right: 6px;
+}
+#espacio{
+    margin-right: 6px;
+}
+#marca{
+    margin-bottom: 50px;;
 }
 
 

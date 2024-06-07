@@ -1,4 +1,5 @@
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Footer 03 Example</title>
@@ -12,23 +13,32 @@
  <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 </style>
+<style>
+    .invert-image {
+        filter: invert(1); /* Invertir los colores */
+        width: 100px;
+        height: auto;
+    }
+</style>
     <link rel="stylesheet" href="catalogo.component.css">
 </head>
-<app-nav-bar></app-nav-bar>
 <body>
 <div class="banner">
     <p class="titulo">Coleccionables</p>    
 </div>
-<div class="volver">Inicio/Coleccionables</div>
-<div><img src="" alt=""></div>
+
+<div class="container">    
+<div class="volver">Inicio/Coleccionables</div>    
+<div class="filter"><img src="/src/assets/img/filtro.png" alt="Filtrar"></div>
+
+</div>
 <div class= "container">
    <div class="flex">
     <div class="item1">
         <div>
-            <div class ="card"><img src ="https://drive.google.com/file/d/1SixTinrQDK2M6SiT5cDlvT0h3a1Phu8F/view?usp=sharing"></div>
-            <div class="nombre2">
-                <span class="name">Descripción</span>
-                <br> 
+            <div class ="card"><img src ="/src/assets/img/Pica.png"></div>
+            <div class="descripcion">
+                <span class="name">Descripción</span>                
                 <span class="precio">$45.000</span> 
                 <br>                  
                 <input type="button" value="Comprar">
@@ -36,10 +46,10 @@
         </div>
     </div>    
     <div class="item2"> <div>
-        <div class ="card"><img src ="https://drive.google.com/file/d/1SixTinrQDK2M6SiT5cDlvT0h3a1Phu8F/view?usp=sharing"></div>
-        <div class="nombre2">
+        <div class ="card"><img src =""></div>
+        <div class="descripcion">
             <span class="name">Descripción</span>
-            <br> 
+             
             <span class="precio">$45.000</span> 
             <br>                  
             <input type="button" value="Comprar">
@@ -47,10 +57,10 @@
     </div>
 </div>
     <div class="item3"> <div>
-        <div class ="card"><img src ="https://drive.google.com/file/d/1SixTinrQDK2M6SiT5cDlvT0h3a1Phu8F/view?usp=sharing"></div>
-        <div class="nombre2">
+        <div class ="card"><img src =""></div>
+        <div class="descripcion">
             <span class="name">Descripción</span>
-            <br> 
+            
             <span class="precio">$45.000</span> 
             <br>                  
             <input type="button" value="Comprar">
@@ -58,8 +68,8 @@
     </div>
 </div>
     <div class="item3"> <div>
-        <div class ="card"><img src ="https://drive.google.com/file/d/1SixTinrQDK2M6SiT5cDlvT0h3a1Phu8F/view?usp=sharing"></div>
-        <div class="nombre2">
+        <div class ="card"><img src =""></div>
+        <div class="descripcion">
             <span class="name">Descripción</span>
             <br> 
             <span class="precio">$45.000</span> 
@@ -79,8 +89,8 @@
         <div class="flex">
          <div class="item1">
              <div>
-                 <div class ="card"><img src ="https://drive.google.com/file/d/1SixTinrQDK2M6SiT5cDlvT0h3a1Phu8F/view?usp=sharing"></div>
-                 <div class="nombre2">
+                 <div class ="card"><img src ="/src/assets/img/Pica.png"></div>
+                 <div class="descripcion">
                      <span class="name">Descripción</span>
                      <br> 
                      <span class="precio">$45.000</span> 
@@ -90,8 +100,8 @@
              </div>
          </div>    
          <div class="item2"> <div>
-             <div class ="card"><img src ="https://drive.google.com/file/d/1SixTinrQDK2M6SiT5cDlvT0h3a1Phu8F/view?usp=sharing"></div>
-             <div class="nombre2">
+             <div class ="card"><img src =""></div>
+             <div class="descripcion">
                  <span class="name">Descripción</span>
                  <br> 
                  <span class="precio">$45.000</span> 
@@ -101,8 +111,8 @@
          </div>
      </div>
          <div class="item3"> <div>
-             <div class ="card"><img src ="https://drive.google.com/file/d/1SixTinrQDK2M6SiT5cDlvT0h3a1Phu8F/view?usp=sharing"></div>
-             <div class="nombre2">
+             <div class ="card"><img src =""></div>
+             <div class="descripcion">
                  <span class="name">Descripción</span>
                  <br> 
                  <span class="precio">$45.000</span> 
@@ -113,7 +123,7 @@
      </div>
          <div class="item3"> <div>
              <div class ="card"><img src ="/src/assets"></div>
-             <div class="nombre2">
+             <div class="descripcion">
                  <span class="name">Descripción</span>
                  <br> 
                  <span class="precio">$45.000</span> 
@@ -135,8 +145,8 @@
         <div class="flex">
          <div class="item1">
              <div>
-                 <div class ="card"><img src ="https://drive.google.com/file/d/1SixTinrQDK2M6SiT5cDlvT0h3a1Phu8F/view?usp=sharing"></div>
-                 <div class="nombre2">
+                 <div class ="card"><img src =""></div>
+                 <div class="descripcion">
                      <span class="name">Descripción</span>
                      <br> 
                      <span class="precio">$45.000</span> 
@@ -146,8 +156,8 @@
              </div>
          </div>    
          <div class="item2"> <div>
-             <div class ="card"><img src ="https://drive.google.com/file/d/1SixTinrQDK2M6SiT5cDlvT0h3a1Phu8F/view?usp=sharing"></div>
-             <div class="nombre2">
+             <div class ="card"><img src =""></div>
+             <div class="descripcion">
                  <span class="name">Descripción</span>
                  <br> 
                  <span class="precio">$45.000</span> 
@@ -157,8 +167,8 @@
          </div>
      </div>
          <div class="item3"> <div>
-             <div class ="card"><img src ="https://drive.google.com/file/d/1SixTinrQDK2M6SiT5cDlvT0h3a1Phu8F/view?usp=sharing"></div>
-             <div class="nombre2">
+             <div class ="card"><img src =""></div>
+             <div class="descripcion">
                  <span class="name">Descripción</span>
                  <br> 
                  <span class="precio">$45.000</span> 
@@ -168,8 +178,8 @@
          </div>
      </div>
          <div class="item3"> <div>
-             <div class ="card"><img src ="https://drive.google.com/file/d/1SixTinrQDK2M6SiT5cDlvT0h3a1Phu8F/view?usp=sharing"></div>
-             <div class="nombre2">
+             <div class ="card"><img src =""></div>
+             <div class="descripcion">
                  <span class="name">Descripción</span>
                  <br> 
                  <span class="precio">$45.000</span> 
@@ -186,17 +196,31 @@
 <div>
     <div class= "container">
         <div class="flex2">
-        <div class="circulo" id="vacio"></div>
-        <div class="circulo">1</div>
-        <div class="circulo1">2</div>
-        <div class="circulo1">3</div>
-        <div class="circulo"></div>    
+        <div class="circulo" id="espacio1"><img src="/src/assets/img/flecha.png" alt="flecha"></div>        
+        <div class="circulo" id="espacio">1</div>        
+        <div class="circulo1" id="espacio">2</div>
+        <div class="circulo1" id="espacio">3</div>
+        <div class="circulo"><img src="/src/assets/img/flecha.png" alt="flecha"></div>    
         
      </div>   
 </div>
+     <div class="container flex">
+      
+       
+        <div class="invert-image"><img src="/src/assets/img/Lego (1).png" alt="" id="marca"></div>
+        <div class="invert-image"><img src="/src/assets/img/929827 copia.png" alt="" id="marca"></div>
+        <div class="invert-image"><img src="/src/assets/img/Need.png" alt="" id="marca"></div>
+        <div class="invert-image"><img src="/src/assets/img/fifa.png" alt="" id="marca"></div>
+        <div class="invert-image"><img src="/src/assets/img/sonic.png" alt="" id="marca"></div>
+        <div class="invert-image"><img src="/src/assets/img/pokemon.png" alt="" id="marca"></div>
+        <div class="invert-image"><img src="/src/assets/img/fortnite.png" alt="" id="marca"></div>
+        <div class="invert-image"><img src="/src/assets/img/mario.png" alt="" id="marca"></div>
+        <div class="invert-image"><img src="/src/assets/img/Sims.png" alt="" id="marca"></div>           
 
+     </div>
     <script>
         document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
-<app-footer></app-footer>
+
+
 

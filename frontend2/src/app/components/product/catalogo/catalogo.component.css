@@ -1,44 +1,46 @@
 *{
     margin:0;
     padding:0;
-    box-sizing: border-box;
-}
-body{
-    width: 100%;
+    box-sizing: border-box;   
+
 }
 .banner{    
     margin-top: 0px;
-    width: 1440px ;
+    width: auto ;
     height: 150px ;       
-    background: radial-gradient(ellipse 600px 100px at 50% 100% ,#d72323 0%,#551010 100%);
-    
+    background: radial-gradient(ellipse at center,#d72323 0%,#551010 100%);
 }
 .titulo{
     padding-top: 80px;
     text-align: center;
     color: #FFFFFF;
     font-family: "Poppins", sans-serif;;
-    font-weight: 500;
+    font-weight:bolder;
     font-size: 40px;      
     
 }
 .flex{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .container{
-    margin-top: 80px;
+    margin-top: 90px;    
     
 }
 .volver{
-    margin-top: 15px;
-    margin-left: 60px;
+    margin-top: 10px;
+    margin-left: 60px;    
     font-family: "Poppins", sans-serif;;
     color: #861919;
-    font-size: 15px;
-    
+    display: flex;    
+    justify-content: flex-start;
+}
+.filter{
+    margin-right: 80px;
+    display: flex;
+    justify-content: flex-end;    
 }
 div[class^='item']{
    
@@ -64,27 +66,27 @@ div[class^='item']:hover{
     margin-bottom: 0px;
     margin-left: 5px;
 }
-.nombre2 .name {
+
+.descripcion{
+    margin-top: 60%;
+}
+.name {
+
     padding-left: 10px;
     margin-top: 10%;
     margin-right: 50%;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 14px;
-
+    font-family: "Poppins", sans-serif;    
+    font-size: 15px;
 }
-.nombre2{
-    margin-top: 10%;
-}
-.nombre2 .precio {
+.precio {
   
     font-family: "Poppins", sans-serif;
-    font-weight: 500;
     font-style: bold;
-    font-size: 24px;
+    font-size: 14px;
     color: #000000;
-    padding-left: 10px;
+    padding-left: 14px;
+    font-weight: bold;
+ 
 }
 input[type="button"] {
     border-radius: 30px;
@@ -94,18 +96,14 @@ input[type="button"] {
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 30px;
+    margin-top: 20px;
     font-family: "Poppins", sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
     padding-left: 30px;
     padding-right: 30px;
-    cursor:default;
-    transition: all 400ms ease;
 }
-input[type="button"]:hover{
-    background-color: #912020;
-}
+
 .circulo{
 
     padding-top: 5px;
@@ -119,25 +117,33 @@ input[type="button"]:hover{
     border-radius: 200px;
     justify-content: center;
     
-    
 }
 .flex2{
    
     display: flex;
     justify-content:center;
-    margin-bottom: 50px;
 
     
 }
 .circulo1{
+    
     padding-top: 3px;
     width: 30px;
     height: 30px;
     text-align: center;
     border-radius: 100px;
-    border: 2px solid #d72323;
-    box-sizing: border-box;
+    border: 3px solid #d72323;
     
+}
+#espacio1{
+    transform: rotate(180deg);
+    margin-right: 6px;
+}
+#espacio{
+    margin-right: 6px;
+}
+#marca{
+    margin-bottom: 50px;;
 }
 
 
