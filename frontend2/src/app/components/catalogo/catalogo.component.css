@@ -26,15 +26,23 @@
 }
 
 .container{
-    margin-top: 100px;
+    margin-top: 90px;    
     
 }
 .volver{
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 60px;    
     font-family: "Poppins", sans-serif;;
     color: #861919;
+    display: flex;    
+    justify-content: flex-start;
 }
+.filter{
+    margin-right: 80px;
+    display: flex;
+    justify-content: flex-end;    
+}
+
 div[class^='item']{
    
     width: 255px;
@@ -113,6 +121,11 @@ input[type="button"] {
     border-radius: 100px;
     border: 3px solid #d72323;
     
+}
+.marcas{
+    display: flex;
+    justify-content:;
+
 }
 
 
