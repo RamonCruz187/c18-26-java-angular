@@ -24,11 +24,9 @@
 </head>
 <body>
 
-    <div *ngIf="productos.length === 0">
-        No hay productos para mostrar.
-    </div>
+  
     
-    <div *ngIf="productos.length > 0">
+   <!-- <div *ngIf="productos.length > 0">
         <div *ngFor="let producto of productos" class="product-card">
             <a href="#"><img [src]="producto.image" alt="{{producto.name}}" class="product-image"></a>
             <h2>{{producto.name}}</h2>
@@ -39,15 +37,7 @@
             <p><strong>Juguete:</strong> {{producto.juguete}}</p>
             <div *ngIf="producto.active">Este producto está activo.</div>
         </div>
-    </div>
-
-
-
-
-
-
-
-
+    </div>-->
 
 <div class="banner">
     <p class="titulo">Coleccionables</p>    
@@ -58,7 +48,24 @@
 <div class="filter"><img src="/src/assets/img/filtro.png" alt="Filtrar"></div>
 
 </div>
-<div class= "container">
+<div *ngIf="productos.length === 0">
+    No hay productos para mostrar.
+</div>
+<div class="container" *ngIf="productos.length > 0">
+    <div *ngFor="let producto of productos" class="product-card">
+        <a href="#"><img [src]="producto.image" alt="{{producto.name}}" class="product-image"></a>
+        <h2>{{producto.name}}</h2>
+        <p>{{producto.description}}</p>
+        <p><strong>Precio:</strong> ${{producto.price}}</p>
+        <p><strong>Stock:</strong> {{producto.stock}}</p>
+        <p><strong>Coleccionable:</strong> {{producto.coleccionable}}</p>
+        <p><strong>Juguete:</strong> {{producto.juguete}}</p>
+        <div *ngIf="producto.active">Este producto está activo.</div>
+        <input type="button" value="Comprar" (click)="comprarProducto(producto)">
+    </div>
+</div>
+
+<!--<div class= "container">
    <div class="flex">
     <div class="item1">
         <div>
@@ -160,13 +167,12 @@
      </div>
      <div>
      
-     </div>
-     
+     </div>     
         </div>          
      </div>
      <div>  
 </div>
-<div>
+<div>-->
     <div class= "container">
         <div class="flex">
          <div class="item1">
@@ -218,7 +224,7 @@
      </div>     
        </div>          
      </div> 
-</div>
+
 <div>
     <div class= "container">
         <div class="flex2">
