@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Footer 03 Example</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap"
-        rel="stylesheet"
-    >
- <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-</style>
+
 <style>
     .invert-image {
         filter: invert(1); /* Invertir los colores */
@@ -21,7 +7,7 @@
     }
 </style>
     <link rel="stylesheet" href="catalogo.component.css">
-</head>
+
 <app-nav-bar></app-nav-bar>
 <body>
 
@@ -38,21 +24,6 @@
 <div *ngIf="productos.length === 0">
     No hay productos para mostrar.
 </div>
-<!-- <div class="container" *ngIf="productos.length > 0">
-    <div *ngFor="let producto of productos" class="product-card">
-        <a href="#"><img [src]="producto.image" alt="{{producto.name}}" class="product-image"></a>
-        <h2>{{producto.name}}</h2>
-        <p>{{producto.description}}</p>
-        <p><strong>Precio:</strong> ${{producto.price}}</p>
-        <p><strong>Stock:</strong> {{producto.stock}}</p>
-        <p><strong>Coleccionable:</strong> {{producto.coleccionable}}</p>
-        <p><strong>Juguete:</strong> {{producto.juguete}}</p>
-        <div *ngIf="producto.active">Este producto está activo.</div>
-        <input type="button" value="Comprar" >
-    </div>
-</div> -->
-
-
     <div class= "container" *ngIf="productos.length > 0">
         <div class="flex" *ngFor="let producto of productos" >
          <div class="item1">
@@ -99,6 +70,7 @@
     <script>
         document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
+    <app-footer></app-footer>
 
 
 
