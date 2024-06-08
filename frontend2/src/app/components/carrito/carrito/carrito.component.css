@@ -22,24 +22,23 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    margin-right: 1050px;
-    
-    
-
+    margin-right: 1050px; 
+  
     
 }
 .container1{
     position: relative;
     margin-top: 30px;
-    margin-bottom: 30px;
-    
-    
+    margin-bottom: 30px; 
+   
 
 }
 .container {
-     display: flex;
+    display: flex;
     flex-direction: column; 
-    align-items: center;
+    align-items: center;    
+        
+    
 }
 
 .row {
@@ -52,9 +51,10 @@
     width: 150;
     height: 90px;
     background-color: rgba(255, 231, 231, 1);
-    border-top: 1px solid rgba(255, 231, 231, 1);;
-    border-bottom: 1px solid rgba(255, 231, 231, 1);;
+    border-top: 1px solid rgba(255, 231, 231, 1);
+    border-bottom: 1px solid rgba(255, 231, 231, 1);
     margin:0px;
+    margin-bottom: 5px;
     
 }
 .box1{
@@ -64,11 +64,40 @@
     border-top: 1px solid rgba(255, 231, 231, 1);;
     border-bottom: 1px solid rgba(255, 231, 231, 1);;   
     text-align:justify;
-    padding-block: 5px;
+    padding-block: 10px;  
+    margin-bottom: 5px;
+    
 
 }
 .span{
+    margin-left: 5px;
+    position:top;
+}
+
+.container-image{
+    margin-top:10px;  
+    margin-left: 10px;    
+    margin-bottom: 10px;    
+    background-color: white; /* Establecer el color de fondo del contenedor como blanco */
+    display: inline-block; /* Alinear el contenedor como un bloque en línea */
     
-   
+}
+.image-container img {
+    position: center;
+    display: block; /* Asegurar que la imagen se muestre como un bloque */
+    width: 100%; /* Opcional: hacer que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Opcional: permitir que la altura de la imagen se ajuste automáticamente */
+}
+#redondeo{
+    border-radius: 10px 0px 0px 0px;
+}
+#redondeo2{
+    border-radius: 0px 10px 0px 0px;
+}
+#redondeo3{
+    border-radius: 0px 0px 0px 10px;
+}
+#redondeo4{
+    border-radius: 0px 0px 10px 0px;
 }
 
