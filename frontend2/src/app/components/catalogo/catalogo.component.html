@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Footer 03 Example</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap"
-        rel="stylesheet"
-    >
- <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-</style>
+
 <style>
     .invert-image {
         filter: invert(1); /* Invertir los colores */
@@ -21,238 +7,70 @@
     }
 </style>
     <link rel="stylesheet" href="catalogo.component.css">
-</head>
+
+<app-nav-bar></app-nav-bar>
 <body>
 
-  
-    
-   <!-- <div *ngIf="productos.length > 0">
-        <div *ngFor="let producto of productos" class="product-card">
-            <a href="#"><img [src]="producto.image" alt="{{producto.name}}" class="product-image"></a>
-            <h2>{{producto.name}}</h2>
-            <p>{{producto.description}}</p>
-            <p><strong>Precio:</strong> ${{producto.price}}</p>
-            <p><strong>Stock:</strong> {{producto.stock}}</p>
-            <p><strong>Coleccionable:</strong> {{producto.coleccionable}}</p>
-            <p><strong>Juguete:</strong> {{producto.juguete}}</p>
-            <div *ngIf="producto.active">Este producto está activo.</div>
-        </div>
-    </div>-->
 
 <div class="banner">
     <p class="titulo">Coleccionables</p>    
 </div>
 
-<div class="container">    
+<div class="container1">    
 <div class="volver">Inicio/Coleccionables</div>    
-<div class="filter"><img src="/src/assets/img/filtro.png" alt="Filtrar"></div>
+<div class="filter"><img src="/assets/img/filtro.png" alt="Filtrar"></div>
 
 </div>
 <div *ngIf="productos.length === 0">
     No hay productos para mostrar.
 </div>
-<div class="container" *ngIf="productos.length > 0">
-    <div *ngFor="let producto of productos" class="product-card">
-        <a href="#"><img [src]="producto.image" alt="{{producto.name}}" class="product-image"></a>
-        <h2>{{producto.name}}</h2>
-        <p>{{producto.description}}</p>
-        <p><strong>Precio:</strong> ${{producto.price}}</p>
-        <p><strong>Stock:</strong> {{producto.stock}}</p>
-        <p><strong>Coleccionable:</strong> {{producto.coleccionable}}</p>
-        <p><strong>Juguete:</strong> {{producto.juguete}}</p>
-        <div *ngIf="producto.active">Este producto está activo.</div>
-        <input type="button" value="Comprar" (click)="comprarProducto(producto)">
-    </div>
-</div>
-
-<!--<div class= "container">
-   <div class="flex">
-    <div class="item1">
-        <div>
-            <div class ="card"><img src ="/src/assets/img/Pica.png"></div>
-            <div class="descripcion">
-                <span class="name">Descripción</span>                
-                <span class="precio">$45.000</span> 
-                <br>                  
-                <input type="button" value="Comprar">
-            </div>
-        </div>
-    </div>    
-    <div class="item2"> <div>
-        <div class ="card"><img src =""></div>
-        <div class="descripcion">
-            <span class="name">Descripción</span>
-             
-            <span class="precio">$45.000</span> 
-            <br>                  
-            <input type="button" value="Comprar">
-        </div>
-    </div>
-</div>
-    <div class="item3"> <div>
-        <div class ="card"><img src =""></div>
-        <div class="descripcion">
-            <span class="name">Descripción</span>
-            
-            <span class="precio">$45.000</span> 
-            <br>                  
-            <input type="button" value="Comprar">
-        </div>
-    </div>
-</div>
-    <div class="item3"> <div>
-        <div class ="card"><img src =""></div>
-        <div class="descripcion">
-            <span class="name">Descripción</span>
-            <br> 
-            <span class="precio">$45.000</span> 
-            <br>                  
-            <input type="button" value="Comprar">
-        </div>
-    </div>
-</div>
-<div>
-
-</div>
-
-   </div>          
-</div>                
-
-    <div class= "container">
-        <div class="flex">
+    <div class= "container2" *ngIf="productos.length > 0">
+        <div class="flex" *ngFor="let producto of productos" id="flexbox">
          <div class="item1">
-             <div>
-                 <div class ="card"><img src ="/src/assets/img/Pica.png"></div>
+             <div >
+                 <div class ="card"><img [src]="producto.image"></div>
+                 <div class="container">
                  <div class="descripcion">
-                     <span class="name">Descripción</span>
-                     <br> 
-                     <span class="precio">$45.000</span> 
-                     <br>                  
+                     <span class="name">{{producto.name}}</span>
+                     <span class="name">{{producto.coleccionable}}</span>                     
+                     <span class="precio">${{producto.price}}</span>                                       
                      <input type="button" value="Comprar">
+                    </div> 
                  </div>
              </div>
-         </div>    
-         <div class="item2"> <div>
-             <div class ="card"><img src =""></div>
-             <div class="descripcion">
-                 <span class="name">Descripción</span>
-                 <br> 
-                 <span class="precio">$45.000</span> 
-                 <br>                  
-                 <input type="button" value="Comprar">
-             </div>
-         </div>
-     </div>
-         <div class="item3"> <div>
-             <div class ="card"><img src =""></div>
-             <div class="descripcion">
-                 <span class="name">Descripción</span>
-                 <br> 
-                 <span class="precio">$45.000</span> 
-                 <br>                  
-                 <input type="button" value="Comprar">
-             </div>
-         </div>
-     </div>
-         <div class="item3"> <div>
-             <div class ="card"><img src ="/src/assets"></div>
-             <div class="descripcion">
-                 <span class="name">Descripción</span>
-                 <br> 
-                 <span class="precio">$45.000</span> 
-                 <br>                  
-                 <input type="button" value="Comprar">
-             </div>
-         </div>
-     </div>
-     <div>
-     
-     </div>     
-        </div>          
-     </div>
-     <div>  
-</div>
-<div>-->
-    <div class= "container">
-        <div class="flex">
-         <div class="item1">
-             <div>
-                 <div class ="card"><img src =""></div>
-                 <div class="descripcion">
-                     <span class="name">Descripción</span>
-                     <br> 
-                     <span class="precio">$45.000</span> 
-                     <br>                  
-                     <input type="button" value="Comprar">
-                 </div>
-             </div>
-         </div>    
-         <div class="item2"> <div>
-             <div class ="card"><img src =""></div>
-             <div class="descripcion">
-                 <span class="name">Descripción</span>
-                 <br> 
-                 <span class="precio">$45.000</span> 
-                 <br>                  
-                 <input type="button" value="Comprar">
-             </div>
-         </div>
-     </div>
-         <div class="item3"> <div>
-             <div class ="card"><img src =""></div>
-             <div class="descripcion">
-                 <span class="name">Descripción</span>
-                 <br> 
-                 <span class="precio">$45.000</span> 
-                 <br>                  
-                 <input type="button" value="Comprar">
-             </div>
-         </div>
-     </div>
-         <div class="item3"> <div>
-             <div class ="card"><img src =""></div>
-             <div class="descripcion">
-                 <span class="name">Descripción</span>
-                 <br> 
-                 <span class="precio">$45.000</span> 
-                 <br>                  
-                 <input type="button" value="Comprar">
-             </div>
-         </div>
-     </div>
-     <div>     
-     </div>     
+         </div>  
        </div>          
      </div> 
 
 <div>
     <div class= "container">
         <div class="flex2">
-        <div class="circulo" id="espacio1"><img src="/src/assets/img/flecha.png" alt="flecha"></div>        
+        <div class="circulo" id="espacio1"><img src="/assets/img/flecha.png" alt="flecha"></div>        
         <div class="circulo" id="espacio">1</div>        
         <div class="circulo1" id="espacio">2</div>
         <div class="circulo1" id="espacio">3</div>
-        <div class="circulo"><img src="/src/assets/img/flecha.png" alt="flecha"></div>    
+        <div class="circulo"><img src="/assets/img/flecha.png" alt="flecha"></div>    
         
      </div>   
 </div>
      <div class="container flex">
       
        
-        <div class="invert-image"><img src="/src/assets/img/Lego (1).png" alt="" id="marca"></div>
-        <div class="invert-image"><img src="/src/assets/img/929827 copia.png" alt="" id="marca"></div>
-        <div class="invert-image"><img src="/src/assets/img/Need.png" alt="" id="marca"></div>
-        <div class="invert-image"><img src="/src/assets/img/fifa.png" alt="" id="marca"></div>
-        <div class="invert-image"><img src="/src/assets/img/sonic.png" alt="" id="marca"></div>
-        <div class="invert-image"><img src="/src/assets/img/pokemon.png" alt="" id="marca"></div>
-        <div class="invert-image"><img src="/src/assets/img/fortnite.png" alt="" id="marca"></div>
-        <div class="invert-image"><img src="/src/assets/img/mario.png" alt="" id="marca"></div>
-        <div class="invert-image"><img src="/src/assets/img/Sims.png" alt="" id="marca"></div>           
+        <div class="invert-image"><img src="/assets/img/Lego (1).png" alt="" id="marca"></div>
+        <div class="invert-image"><img src="/assets/img/929827 copia.png" alt="" id="marca"></div>
+        <div class="invert-image"><img src="/assets/img/Need.png" alt="" id="marca"></div>
+        <div class="invert-image"><img src="/assets/img/fifa.png" alt="" id="marca"></div>
+        <div class="invert-image"><img src="/assets/img/sonic.png" alt="" id="marca"></div>
+        <div class="invert-image"><img src="/assets/img/pokemon.png" alt="" id="marca"></div>
+        <div class="invert-image"><img src="/assets/img/fortnite.png" alt="" id="marca"></div>
+        <div class="invert-image"><img src="/assets/img/mario.png" alt="" id="marca"></div>
+        <div class="invert-image"><img src="/assets/img/Sims.png" alt="" id="marca"></div>           
 
      </div>
     <script>
         document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
+    <app-footer></app-footer>
 
 
 
