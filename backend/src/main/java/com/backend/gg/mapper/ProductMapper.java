@@ -16,9 +16,9 @@ public class ProductMapper {
             .description(productDTO.getDescription())
             .stock(productDTO.getStock())
             .price(productDTO.getPrice())
+            .active(productDTO.isActive())
             .image(productDTO.getImage())
-            .coleccionable(productDTO.getColeccionable())
-            .juguete(productDTO.getJuguete())
+            .categoria(productDTO.getCategoria())
             .build();
 }
     
@@ -30,8 +30,8 @@ public class ProductMapper {
             .stock(product.getStock())
             .price(product.getPrice())
             .image(product.getImage())
-            .coleccionable(product.getColeccionable())
-            .juguete(product.getJuguete())
+            .active(product.isActive())
+            .categoria(product.getCategoria())
             .build();
 }
     

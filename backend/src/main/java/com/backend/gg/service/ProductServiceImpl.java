@@ -3,6 +3,7 @@ package com.backend.gg.service;
 import com.backend.gg.dto.ProductDTO;
 import com.backend.gg.dto.ProductRequestUpdateDTO;
 import com.backend.gg.entity.Product;
+import com.backend.gg.enums.Categoria;
 import com.backend.gg.mapper.ProductMapper;
 import com.backend.gg.repository.ProductRepository;
 import java.util.List;
@@ -30,6 +31,13 @@ public class ProductServiceImpl implements ProductService {
     public ProductDTO getProduct(Long id){
         
         return productMapper.toProductDTO(productRepo.findById(id).orElse(null));
+    }
+    
+
+    @Override
+    public List<ProductDTO> getCategory(Categoria categoria) {
+        
+        return productMapper.convertToListDto(productRepo.getProductsByCategoria(categoria));
     }
 
     @Override
@@ -77,5 +85,6 @@ public class ProductServiceImpl implements ProductService {
             return false;
         }
     }
+
 
 }

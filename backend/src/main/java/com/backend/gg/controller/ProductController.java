@@ -3,27 +3,30 @@ package com.backend.gg.controller;
 import com.backend.gg.dto.ProductDTO;
 import com.backend.gg.dto.ProductRequestUpdateDTO;
 import com.backend.gg.entity.Product;
+import com.backend.gg.enums.Categoria;
+import com.backend.gg.mapper.ProductMapper;
+import com.backend.gg.repository.ProductRepository;
 import com.backend.gg.service.ProductService;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
+import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(value = "/products")
+@CrossOrigin
 public class ProductController {
 
     @Autowired
     ProductService productService;
+
+    @Autowired
+    ProductRepository productRepository;
+
+    @Autowired
+    ProductMapper productMapper;
     
     @GetMapping("/all")
     public ResponseEntity getAllProducts(){
@@ -50,6 +53,26 @@ public class ProductController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+    @GetMapping("categoria/{categoria}")
+    public ResponseEntity getCategory(@PathVariable Categoria categoria){
+
+        List<ProductDTO> productDTO = productService.getCategory(categoria);
+        //List<ProductDTO> productDTO =productMapper.convertToListDto(productRepository.getProductsByCategoria(categoria)) ;
+
+        if(productDTO != null){
+            return new ResponseEntity<>(productDTO, HttpStatus.OK);
+
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+
+
+
+
+
+
 
     @PostMapping("/create")
     public ResponseEntity createProduct(@RequestBody ProductDTO productDTO){

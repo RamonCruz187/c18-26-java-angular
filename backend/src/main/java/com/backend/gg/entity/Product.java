@@ -1,10 +1,6 @@
 package com.backend.gg.entity;
 
-import com.backend.gg.enums.Coleccionable;
-import com.backend.gg.enums.Hogar;
-import com.backend.gg.enums.Juguete;
-import com.backend.gg.enums.Oficina;
-import com.backend.gg.enums.Ropa;
+import com.backend.gg.enums.Categoria;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -31,13 +27,5 @@ public class Product {
     private boolean active;
 
     @Enumerated(EnumType.STRING)
-    private Coleccionable coleccionable;
-    @Enumerated(EnumType.STRING)
-    private Juguete juguete;
-    @Enumerated(EnumType.STRING)
-    private Ropa ropa;
-    @Enumerated(EnumType.STRING)
-    private Oficina oficina;
-    @Enumerated(EnumType.STRING)
-    private Hogar hogar;
+    private Categoria categoria;
 }

@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.List;
 
 @Getter
@@ -14,5 +15,6 @@ import java.util.List;
 public class CartDto implements Serializable {
 
     private List<OrderDetailDto> orderDetailDtos;
+    private BigDecimal shippingCost;
 
 }

@@ -1,8 +1,7 @@
 
 package com.backend.gg.dto;
 
-import com.backend.gg.enums.Coleccionable;
-import com.backend.gg.enums.Juguete;
+import com.backend.gg.enums.Categoria;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import java.io.Serializable;
@@ -25,7 +24,5 @@ public class ProductDTO implements Serializable {
     private boolean active;
 
     @Enumerated(EnumType.STRING)
-    private Coleccionable coleccionable;
-    @Enumerated(EnumType.STRING)
-    private Juguete juguete;
+    private Categoria categoria;
 }

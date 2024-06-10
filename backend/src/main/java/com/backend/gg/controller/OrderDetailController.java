@@ -12,7 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/cart")
 @RequiredArgsConstructor
 public class OrderDetailController {
 
@@ -20,11 +20,17 @@ public class OrderDetailController {
     final OrderDetailService orderDetailService;
     final OrderDetailRepository orderDetailRepository;
 
-    @PostMapping("/cart/{id}")
+    @PostMapping("/{id}")
     public ResponseEntity<?> newCart (@RequestBody @Valid CartDto cartDto, @PathVariable Long id){
         try {
-            orderDetailService.processNewCart(cartDto, id);
-            return new ResponseEntity<>(HttpStatus.OK);
+            if (orderDetailService.stockControl(cartDto)){
+                orderDetailService.processNewCart(cartDto, id);
+                return new ResponseEntity<>(HttpStatus.OK);
+
+            }else {
+                return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
+            }
+
         } catch (EntityNotFoundException e) {
             return new ResponseEntity<>("Entity not found: " + e.getMessage(), HttpStatus.NOT_FOUND);
         } catch (IllegalArgumentException e) {
