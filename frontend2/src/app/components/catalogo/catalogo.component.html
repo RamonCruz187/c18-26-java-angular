@@ -25,7 +25,7 @@
     No hay productos para mostrar.
 </div>
     <div class= "container2" *ngIf="productos.length > 0">
-        <div class="flex" *ngFor="let producto of productos" id="flexbox">
+        <div class="flex1" *ngFor="let producto of productos">
          <div class="item1">
              <div >
                  <div class ="card"><img [src]="producto.image"></div>
@@ -53,8 +53,7 @@
         
      </div>   
 </div>
-     <div class="container flex">
-      
+     <div class="container flex">    
        
         <div class="invert-image"><img src="/assets/img/Lego (1).png" alt="" id="marca"></div>
         <div class="invert-image"><img src="/assets/img/929827 copia.png" alt="" id="marca"></div>

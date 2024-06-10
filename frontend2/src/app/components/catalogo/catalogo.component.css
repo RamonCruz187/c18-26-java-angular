@@ -1,12 +1,14 @@
 *{
     margin:0;
     padding:0;
-    box-sizing: border-box;   
-
+    box-sizing: border-box; 
 }
-.banner{    
+   
+.banner{ 
+    margin:0;
+    padding:0;   
     margin-top: 0px;
-    width: auto ;
+    width: 100% ;
     height: 150px ;       
     background: radial-gradient(ellipse at center,#d72323 0%,#551010 100%);
 }
@@ -14,20 +16,25 @@
     padding-top: 80px;
     text-align: center;
     color: #FFFFFF;
-    font-family: "Poppins", sans-serif;;
+    font-family: "Poppins", sans-serif;
     font-weight:bolder;
     font-size: 40px;      
     
 }
+.flex2{
+    display: flex;       
+    justify-content:space-evenly;
+   
+
+}
 .flex{
     width: 100%;
-    display: flex;
-    justify-content:space-evenly;
-}
+    display: flex;       
+    justify-content:space-evenly;    
 
+}
 .container1{
-    margin-top: 90px;  
-     
+    margin-top: 90px;    
     
 }
 
@@ -47,7 +54,10 @@
 .container2{
     display:flex;
     margin-top: 90px;
-
+    flex-wrap: wrap;
+    gap: 26px;  
+    margin-left: 150px;  
+   
 }
 div[class^='item']{
    
@@ -173,7 +183,20 @@ input[type="button"]:hover{
 #marca{
     margin-bottom: 50px;;
 }
-
+@media (max-width: 1200px) {
+    .container2 {
+      margin-left: 50px; /* Ajusta el margen para pantallas medianas */
+      margin-right: 50px; /* Asegúrate de centrar el contenedor */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container2 {
+      margin-left: 20px; /* Ajusta el margen para pantallas más pequeñas */
+      margin-right: 20px;
+      margin-top: 50px; /* Opcional: ajusta el margen superior */
+    }
+  }
 
 
 
