@@ -1,7 +1,7 @@
 
 package com.backend.gg.enums;
 
-public enum Coleccionable {
+public enum Categoria {
     
     COLECCIONABLE,
     JUGUETE,

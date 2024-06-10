@@ -4,16 +4,19 @@ package com.backend.gg.dto;
 import com.backend.gg.enums.Categoria;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import java.io.Serializable;
 import java.math.BigDecimal;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductDTO implements Serializable {
+public class ProductRequestUpdateDTO {
     
     private Long id;
     private String name;
