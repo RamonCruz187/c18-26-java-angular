@@ -68,12 +68,6 @@ public class ProductController {
     }
 
 
-
-
-
-
-
-
     @PostMapping("/create")
     public ResponseEntity createProduct(@RequestBody ProductDTO productDTO){
 
