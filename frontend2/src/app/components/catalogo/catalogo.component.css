@@ -22,7 +22,7 @@
 .flex{
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
 }
 
 .container1{
@@ -34,7 +34,7 @@
 .volver{
     margin-top: 10px;
     margin-left: 60px;    
-    font-family: "Poppins", sans-serif;;
+    font-family: "Poppins", sans-serif;
     color: #861919;
     display: flex;    
     justify-content: flex-start;
@@ -78,9 +78,7 @@ div[class^='item']:hover{
     margin-left: 5px;
     margin-top: 5px;
 }
-.container3{
-  
-}
+
 
 .descripcion{
     display: flex;

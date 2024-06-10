@@ -1,7 +1,7 @@
 .titulo{
-    font-family: Popins;
+    font-family: "Popins",sans-serif;
     font-size: 30px;
-    font-weight: bold;
+    font-weight:bold;
     margin-left: 480px;
     margin-top: 100px;
     margin-bottom: 30px;
@@ -29,8 +29,7 @@
 .container1{
     position: relative;
     margin-top: 30px;
-    margin-bottom: 30px; 
-   
+    margin-bottom: 30px;    
 
 }
 .container {
@@ -70,8 +69,10 @@
 
 }
 .span{
-    margin-left: 5px;
+    margin-left: 10px;
     position:top;
+    font-family: "Popins",sans-serif;
+    font-weight: bold;
 }
 
 .container-image{
@@ -88,6 +89,49 @@
     width: 100%; /* Opcional: hacer que la imagen ocupe todo el ancho del contenedor */
     height: auto; /* Opcional: permitir que la altura de la imagen se ajuste automáticamente */
 }
+.nombreP{
+    margin-bottom: 0px;
+}
+.descriProd{
+    margin-top: 0px;
+}
+.precio{
+
+    font-weight: bold;
+    margin-top: 25px;
+    margin-left: 30px;
+}
+
+.quantity-control button {
+    
+    background: none;
+    border: 1px solid #861919;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    border-radius: 20px;    
+    margin-top: 25px;
+
+}   
+
+#quantity{
+    color: #861919;
+    margin: 10px;
+}
+#quantity-btn{
+    color: #861919;
+    font-family:"Popins",sans-serif;
+    font-size: 20px;
+}
+.icon-cant{
+    width: 15px;
+    padding-inline: 8px;
+}
+.eliminarP{
+    margin-top: 25px;
+    margin-left: 25px;
+}
 #redondeo{
     border-radius: 10px 0px 0px 0px;
 }
@@ -99,5 +143,57 @@
 }
 #redondeo4{
     border-radius: 0px 0px 10px 0px;
+}
+.container2{
+    display: inline-block;
+    position: center;
+    margin-left: 0px;
+}
+.finalizar{
+    text-align:left ;
+    display: flex;  
+    align-content: flex-start;    
+    position:center;
+    width: 100%;
+    
+}
+.container2{
+    width: 850px;
+    height: fit-content;
+}
+.tituloh4{
+    font-weight: bold; 
+    font-family: "Poping",sans-serif;
+    font-size: larger;
+
+
+}
+.envio{
+    font-weight: bold;
+    margin-right: 80px;
+    display: inline-flex;
+    font-family: "Poping",sans-serif;
+}
+.demora{
+    margin-left: 20px;
+    display: inline-flex;
+}
+.demora2{
+    margin-left: 30px;
+}
+.boton{
+    margin-left: 200px;
+    background: none;
+    border: 1px solid #D72323;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    border-radius: 20px;    
+    margin-top: 25px;
+}
+#seleccionar{
+  
+   color: #D72323;
 }
 
