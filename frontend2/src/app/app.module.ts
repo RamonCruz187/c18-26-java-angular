@@ -22,7 +22,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'product/:id', component: ProductComponent },
-  { path: 'catalogo/:categoria', component: CatalogoComponent }
+  { path: 'catalogo/:categoria', component: CatalogoComponent },
+  { path: 'cart', component: CartComponent },
 ];
 
 

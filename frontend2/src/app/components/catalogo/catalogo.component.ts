@@ -1,6 +1,8 @@
 
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CartItem } from 'src/app/model/cart-item';
+import { CartService } from 'src/app/services/cart.service';
 import { HttpServiceService } from 'src/app/services/http-service.service';
 
 @Component({
@@ -11,8 +13,10 @@ import { HttpServiceService } from 'src/app/services/http-service.service';
 export class CatalogoComponent {
   categoria: any;
   productos: any[] = [];
+  producto: any;
+  cartItems: any;
 
-  constructor(private route: ActivatedRoute, private data:HttpServiceService) { }
+  constructor(private route: ActivatedRoute, private data:HttpServiceService, private router: Router, private cartService: CartService) { }
 
   ngOnInit(): void {
     // Recuperar el ID del producto de la ruta
@@ -28,4 +32,20 @@ export class CatalogoComponent {
   });
   }
 });
-  }}
+  }
+  goToProduct(id: any) {
+    console.log(id);
+    this.router.navigate(['/product', id]);
+    
+  }
+
+  addToCart(id:number): void {
+    this.producto= this.productos.find(p => p.id===id);
+    console.log(this.producto);
+    const cartItem:CartItem ={product:this.producto,quantity:1};
+          this.cartItems=cartItem;
+    this.cartService.addToCart(this.cartItems);
+    alert("Producto añadido al carrito!");
+   }
+
+}
