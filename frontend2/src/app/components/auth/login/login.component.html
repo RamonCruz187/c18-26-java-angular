@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,36 +10,49 @@
         /* Aquí va el CSS que proporcioné en la respuesta anterior */
     </style>
 </head>
+
 <body>
     <div class="sidenav-bg"></div>
     <div class="main-content">
-        <div class="form-login-default">
-            <h1 class="title">Bienvenidos!</h1>
-            <div class="input-container">
-                <label for="email" class="form-title">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="Escribe tu e-mail">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-login-default">
+                <h1 class="title">Bienvenidos!</h1>
+                <div class="input-container">
+                    <label for="email" class="form-title">E-mail</label>
+                    <input type="email" id="email" formControlName="email" name="email" placeholder="Escribe tu e-mail"/>
+                    <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+                        <div *ngIf="loginForm.get('email')?.errors?.['required']">El email es obligatorio.</div>
+                        <div *ngIf="loginForm.get('email')?.errors?.['email']">El email no es válido.</div>
+                      </div>
+                </div>
+                <div class="input-container">
+                    <label for="password"  class="form-title">Contraseña</label>
+                    <input type="password" id="password" formControlName="password" name="password" placeholder="Escribe tu contraseña">
+                    <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+                        <div *ngIf="loginForm.get('password')?.errors?.['required']">La contraseña es obligatoria.</div>
+                        <div *ngIf="loginForm.get('password')?.errors?.['minlength']">La contraseña debe tener al menos 6 caracteres.</div>
+                      </div>
+                </div>
+                <div class="forgot-password">Olvidaste tu contraseña?</div>
+                <button type="submit" class="button">Ingresar</button>
+                <div class="divider">
+                    <div class="line"></div>
+                    <div class="or">o ingresar con</div>
+                    <div class="line"></div>
+                </div>
+                <div class="social-login">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+                <div class="register-now">
+                    <div class="frame-1015"></div>
+                    <div class="label">Todavía no tenes cuenta? <span class="register-now-text">Regístrate ahora</span>
+                    </div>
+                </div>
             </div>
-            <div class="input-container">
-                <label for="password" class="form-title">Contraseña</label>
-                <input type="password" id="password" name="password" placeholder="Escribe tu contraseña">
-            </div>
-            <div class="forgot-password">Olvidaste tu contraseña?</div>
-            <button class="button">Ingresar</button>
-            <div class="divider">
-                <div class="line"></div>
-                <div class="or">o ingresar con</div>
-                <div class="line"></div>
-            </div>
-            <div class="social-login">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-            </div>
-            <div class="register-now">
-                <div class="frame-1015"></div>
-                <div class="label">Todavía no tenes cuenta? <span class="register-now-text">Regístrate ahora</span></div>
-            </div>
-        </div>
+        </form>
+
     </div>
 </body>
 </html>

@@ -1,33 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Registro</title>
-    <link rel="stylesheet" href="register.component.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+
 <body>
+  <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
     <div class="sidenav-bg"></div>
     <div class="main-content">
         <div class="form-register-default">
             <h1 class="title">Crear una cuenta</h1>
+           
             <div class="input-container">
-                <label for="name" class="form-title">Nombre y apellido</label>
-                <input type="text" id="name" name="name" placeholder="Escribe tu nombre y apellido">
+                <label for="nombre" class="form-title">Nombre</label>
+                <input type="text" id="name" formControlName="name" name="name" placeholder="Escribe tu nombre">
+                <div *ngIf="registroForm.get('nombre')?.invalid && registroForm.get('nombre')?.touched">
+                  El nombre es obligatorio.
+                </div>
+              </div>
+
+            <div class="input-container">
+              <label for="apellido" class="form-title">Apellido</label>
+              <input type="text" id="lastName" formControlName="lastName"name="lastName" placeholder="Escribe tuapellido">
+              <div *ngIf="registroForm.get('apellido')?.invalid && registroForm.get('apellido')?.touched">
+                El apellido es obligatorio.
+              </div>
             </div>
+
+          
             <div class="input-container">
                 <label for="email" class="form-title">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="Escribe tu e-mail" required>
-            </div>
+                <input type="email" id="email" formControlName="email" name="email" placeholder="Escribe tu e-mail" required>
+                <div *ngIf="registroForm.get('email')?.invalid && registroForm.get('email')?.touched">
+                  <div *ngIf="registroForm.get('email')?.errors?.['required']">El email es obligatorio.</div>
+                  <div *ngIf="registroForm.get('email')?.errors?.['email']">El email no es válido.</div>
+                </div>
+              </div>
+
+
             <div class="input-container password-container">
                 <label for="password" class="form-title">Contraseña</label>
                 <div class="password-wrapper">
-                    <input type="password" id="password" name="password" placeholder="Escribe tu contraseña">
+                    <input id="password" type="password" formControlName="password" name="password" placeholder="Escribe tu contraseña">
                     <div class="separator"></div>
                     <i class="fas fa-eye toggle-password" onclick="togglePasswordVisibility()"></i>
-                </div>
+                    <div *ngIf="registroForm.get('password')?.invalid && registroForm.get('password')?.touched">
+                      <div *ngIf="registroForm.get('password')?.errors?.['required']">La contraseña es obligatoria.</div>
+                      <div *ngIf="registroForm.get('password')?.errors?.['minlength']">La contraseña debe tener al menos 6 caracteres.</div>
+                    </div>
+                  </div>
             </div>
+
             <div class="checkbox-container">
                 <input type="checkbox" id="terms" name="terms">
                 <label for="terms">Acepto términos y condiciones</label>
@@ -48,6 +66,5 @@
             </div>
         </div>
     </div>
-    <script src="register.component.js"></script>
+  </form>
 </body>
-</html>

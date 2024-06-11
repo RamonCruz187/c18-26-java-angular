@@ -1,0 +1,18 @@
+<app-nav-bar></app-nav-bar>
+
+<div *ngIf="product">
+    <h1>{{ product.name }}</h1>
+    <img [src]="product.image" alt="{{ product.name }}">
+    <p>{{ product.description }}</p>
+    <p>Precio: ${{ product.price }}</p>
+    <p>Stock: {{ product.stock }}</p>
+    <p>Coleccionable: {{ product.coleccionable }}</p>
+    <p *ngIf="product.active">Este producto está activo</p>
+    <p *ngIf="!product.active">Este producto no está activo</p>
+    <button (click)="addToCart()">Add to Cart</button>
+  </div>
+  <div *ngIf="!product">
+    <p>Cargando...</p>
+  </div>
+
+  <app-footer></app-footer>
