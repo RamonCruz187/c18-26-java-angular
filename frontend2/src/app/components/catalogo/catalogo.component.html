@@ -28,13 +28,13 @@
         <div class="flex1" *ngFor="let producto of productos">
          <div class="item1">
              <div >
-                 <div class ="card"><img [src]="producto.image"></div>
+                 <div class ="card"><a href="javascript:void(0)"  (click)="goToProduct(producto.id)" ><img [src]="producto.image"></a></div>
                  <div class="container">
                  <div class="descripcion">
                      <span class="name">{{producto.name}}</span>
                      <span class="name">{{producto.coleccionable}}</span>                     
                      <span class="precio">${{producto.price}}</span>                                       
-                     <input type="button" value="Comprar">
+                     <input type="button" value="Comprar" (click)="addToCart(producto.id)">
                     </div> 
                  </div>
              </div>

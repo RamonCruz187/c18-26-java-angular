@@ -1,1 +1,38 @@
-<p>cart works!</p>
+<app-nav-bar></app-nav-bar>
+
+<h1>Carrito</h1>
+<div *ngIf="(cart$ | async)?.length === 0">
+    <p>The cart is empty.</p>
+  </div>
+<div>
+    <table class="table" >
+    <thead>
+      <tr>
+        <th scope="col">Producto</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Precio Total</th>
+        <th scope="col">Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of cart$ | async; let i = index">
+        <td>{{ product.product.name }}</td>
+        <td>{{ product.product.price }}</td>
+        <button >-</button>
+          <span>{{product.quantity}}</span>
+          <button >+</button>
+        <td>{{ product.product.price*product.quantity}}</td>
+        <td><button (click)="removeFromCart(i)">Remove</button></td>
+      </tr>
+      
+    </tbody>
+    <button (click)="clearCart()">Clear Cart</button>
+  </table>
+  <div>Total: {{ getTotalPrice() | currency }}</div>
+  <h4>Envío: $200</h4>
+  <h3>Total con envío: {{ getTotalPrice()+200 | currency }}</h3>
+  <button >Pagar</button>
+</div>
+
+<app-footer></app-footer>
