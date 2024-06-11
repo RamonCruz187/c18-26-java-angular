@@ -35,9 +35,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 300;
+    font-family: 'Montserrat', light;
+    font-weight: 300px;
     font-size: 28px;
     line-height: 24px;
     display: flex;
@@ -45,7 +44,12 @@
     text-align: center;
     color: #FFFFFF;
     background: radial-gradient(97.99% 97.99% at 2.01% 92.44%, #A61B1B 31.09%, #711212 100%);
-  }
+}
+
+.header-banner img{
+  margin: 20px;
+}
+
   
   footer {
     background: var(--fondo-footer);
@@ -175,13 +179,13 @@
     gap: 0.5rem;
   }
   
-  .social-links img {
-    width: 1.5rem;
-    height: 1.5rem;
+  .social-links svg {
+    width: 2.5rem;
+    height: 2.5rem;
     transition: all 0.2s ease-in-out;
   }
   
-  .social-links img:hover {
+  .social-links svg:hover {
     transform: scale(1.1);
   }
   
@@ -207,5 +211,9 @@
       justify-content: center;
       margin: 0 auto;
     }
+
+  .header-banner { font-size: 12px;}
+
+    
   }
   

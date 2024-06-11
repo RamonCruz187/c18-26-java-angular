@@ -12,7 +12,7 @@ body {
     background-color: #ffffff;
     padding: 10px 20px;
     color: rgb(0, 0, 0);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Aquí aplico el efecto de sombra */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -20,11 +20,36 @@ body {
     font-weight: bold;
 }
 
+.imgLogo {
+    width: 70%;
+    height: 70%;
+    margin-left: 40px;
+    margin-top: 5px;
+    margin-bottom: -10px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
+}
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #ffffff;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav-item {
@@ -59,9 +84,9 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     border-radius: 4px;
-    list-style: none; /* Eliminar el círculo blanco */
-    padding: 0; /* Quitar el padding por defecto */
-    margin: 0; /* Quitar el margen por defecto */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .dropdown-menu-right {
@@ -71,19 +96,18 @@ body {
 
 .dropdown-menu li {
     border-bottom: 1px solid #afaeae;
-    padding: 10px 15px; /* Asegurarse de que toda la casilla sea interactiva */
+    padding: 10px 15px;
 }
 
 .dropdown-menu li a {
     color: #000000;
     display: block;
     text-decoration: none;
-    text-align: left; /* Alinear el texto a la izquierda */
+    text-align: left;
 }
 
 .dropdown-menu li:hover {
     background-color: #f0e9e9;
-    /* Cambiar el color de fondo a gris al pasar el cursor */
 }
 
 .nav-item:hover .dropdown-menu,
@@ -113,7 +137,7 @@ body {
     border: none;
     outline: none;
     padding: 5px 10px;
-    width: 200px;
+    width: 100%;
     font-size: 16px;
     font-family: "Poppins", sans-serif;
 }
@@ -127,6 +151,16 @@ body {
     font-size: 16px;
 }
 
+.perfil {
+    width: 85%;
+    height: 85%;
+}
+
+.carrito {
+    width: 100%;
+    height: 100%;
+}
+
 .icon-item {
     position: relative;
     margin-right: 30px;
@@ -138,13 +172,55 @@ body {
     font-size: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .logo,
+    .search-container,
+    .icons {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        justify-content: flex-start;
+    }
+
+    .search-container {
+        justify-content: center;
+        margin: 10px 0;
+        width: auto;
+    }
+
+    .icons {
+        justify-content: flex-end;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
     .nav-links {
         display: none;
+        flex-direction: column;
+        width: 100%;
     }
-    .search-container {
-        flex: 1;
-        margin-right: 10px;
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-item a {
+        padding: 10px 20px;
+    }
+
+    .perfil,
+    .carrito {
+        width: 30px;
+        height: 30px;
     }
 }
 
