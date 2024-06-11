@@ -1,0 +1,175 @@
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+  
+h1 {
+    font-size: 30px;
+    font-family: "Popins",sans-serif;
+    margin-left: 250px;
+    
+ }
+  
+  /* Table Container */
+.table-container {
+    width: 60%;
+    max-width: 800px;
+    margin: 0 auto; 
+     
+   
+  
+}
+
+  
+  /* Table Styles */
+.table {
+    width: 100%;   
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border-radius: 15px;
+    background-color:rgba(255, 231, 231, 1);
+    padding: 20px;
+    
+    
+  
+
+}  
+.thead {
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+       
+}
+  
+.linea{
+    
+    border-bottom: 3px solid white;
+}
+  
+.recuadro {  
+   
+    padding: 20px;
+    text-align: left;
+    background-color: rgba(255, 231, 231, 1);    
+    
+}
+
+.tbody {
+    border-radius: 10px;
+    margin-top: 5px;
+    background-color: rgba(255, 231, 231, 1);
+    margin-bottom: 30px;
+
+} 
+
+  
+td{
+    text-align: center;    
+    padding:40px;
+    display: flexbox;      
+}
+   
+.quantity-control{
+    
+    background: none;
+    border: 1px solid #551010;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    border-radius: 20px;    
+    margin-top: 30px;
+    position:center;
+    text-align: center;
+
+}   
+.boton{
+    border:none;
+    background: none;
+}
+#quantity{
+    color: #861919;
+    margin: 10px;
+}
+  
+  /* Button Styles */
+
+.button {
+    background-color: #ff4d4d; /* Red background for buttons */
+    color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    flex-wrap: wrap;
+
+  }
+  
+.button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+  }
+.eliminar{
+    border:none;
+    background: none;
+} 
+h4{
+    font-size: 30px;
+    font-family: "Poppins";
+    font-weight: bold;
+
+}
+.demora{
+    font-size: 50px;
+
+}
+.total{
+  
+    margin-right: 150px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.borde{
+     border-bottom: 2px solid  #551010;
+     margin-bottom: 10px;
+     display: flex;
+    flex-wrap: wrap;
+    gap:130px;
+}
+.button3{
+    display: flex;
+    display: block;
+    color:#D72323;
+    margin-bottom: 100px;
+    background: none;
+    border: 1px solid #D72323;
+    padding: 10px 45px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    border-radius: 20px;    
+    margin-top: 25px;
+    transition: background-color 0.3s, color 0.3s; 
+}
+    
+
+.button3:hover{
+    color: #fff; 
+    background-color: #D72323;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap:300px;
+  
+    
+ }
+  
+
