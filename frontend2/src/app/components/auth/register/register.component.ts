@@ -9,8 +9,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   registroForm: FormGroup;
+  passwordFieldType: string = 'password';
 
-  constructor(private data:HttpServiceService, private fb: FormBuilder) { 
+  constructor(private data: HttpServiceService, private fb: FormBuilder) {
     this.registroForm = this.fb.group({
       name: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -21,25 +22,25 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   onSubmit() {
     if (this.registroForm.valid) {
       this.data.newUser({
-        "name":this.registroForm.value.name,
+        "name": this.registroForm.value.name,
         "lastName": this.registroForm.value.lastName,
         "email": this.registroForm.value.email,
         "password": this.registroForm.value.password
-      }
-       
-      ).subscribe(data => {
+      }).subscribe(data => {
         console.log(this.registroForm.value);
         console.log("registro exitoso");
       })
-      //console.log(this.registroForm.value);
     } else {
       console.log('El formulario es inválido');
     }
   }
 
-  
+  togglePasswordVisibility() {
+    this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password';
+  }
 
 }

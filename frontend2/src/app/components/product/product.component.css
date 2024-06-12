@@ -1,0 +1,249 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.product-container {
+    position: relative;
+    width: 1262px;
+    height: 698px;
+    background: #FFE7E7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+    margin: 40px auto; /* Auto para centrar horizontalmente */
+}
+
+.product-images {
+    width: 53%;
+    position: relative;
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+
+.main-image {
+    width: 75%; /* Ancho del rectángulo principal */
+    height: 60%;
+    overflow: hidden;
+    position: relative;
+    margin: auto; /* Centrar horizontal y verticalmente */
+    background: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.main-image img {
+    width: 50%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.thumbnail-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thumbnail-images .thumbnail {
+    flex: 1;
+    border-radius: 10px; /* Añadir bordes redondeados */
+    overflow: hidden;
+    background-color: #f0f0f0;
+    height: 100px; /* Ajustar altura según se necesite */
+}
+
+.thumbnail-images img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain; /* Ajuste para que la imagen se vea completa */
+}
+
+.product-details {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.product-title {
+    margin-top: 10%;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 4%;
+    display: flex;
+    align-items: center;
+
+    /* Title */
+    width: 100%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    color: #000000;
+}
+
+.product-rating {
+    font-size: 18px;
+    margin-left: 10px; /* Espacio entre el título y la valoración */
+    display: flex;
+    align-items: center;
+}
+
+.product-description {
+    /* Body Text */
+    width: 480px;
+    height: 96px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    margin-top: 5%;
+}
+
+.product-category, .product-price {
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.product-category span {
+    font-weight: bold;
+    margin-right: 10px; /* Espacio entre "Category:" y "Toys" */
+}
+
+.product-price {
+    margin-top: 5%;
+    margin-bottom: 10px;
+
+    /* Restaurar estilo original */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    color: #861919;
+}
+
+.product-stock {
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.product-stock span {
+    color: #D72323;
+    font-weight: bold;
+    margin-right: 10px; /* Espacio entre "Stock:" y el número */
+}
+
+.product-actions {
+    margin-top: 86%; /* Ajustado para subir los botones */
+    display: flex;
+    position: absolute;
+    left: 20px; /* Ajusta según sea necesario */
+}
+
+.btn-add-to-cart{
+    color: white;
+    padding: 15px 30px; /* Agrandar los botones */
+    background-color: #D72323;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+
+    /* Background */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-add-to-wishlist {
+    color: rgb(0, 0, 0);
+    padding: 15px 30px; /* Agrandar los botones */
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+
+    /* Background */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.btn-add-to-cart:hover, .btn-add-to-wishlist:hover {
+    background-color: #FF7F7F;
+}
+
+.btn-add-to-wishlist:hover {
+    color: white;
+}
+
+/* Media queries para adaptar a distintas resoluciones */
+@media (max-width: 1200px) {
+    .product-container {
+        flex-direction: column;
+        height: auto;
+        max-width: 90%;
+
+    }
+
+    .product-images {
+        width: 100%;
+    }
+
+    .thumbnail-images {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .product-details {
+        width: 100%;
+        padding: 10px;
+    }
+
+
+   
+    .product-actions{
+        margin-top: 10%; /* Ajustado para subir los botones */
+        display: flex;
+        position: relative;
+        left: 0px; /* Ajusta según sea necesario */
+    }
+
+}

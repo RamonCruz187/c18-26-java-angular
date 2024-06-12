@@ -12,8 +12,13 @@
 
 <body>
     <div class="container">
-        <div class="sidenav-bg"></div>
-        <div class="main-content">
+        <div class="sidenav-bg">
+            <img class="bg1" src="https://res.cloudinary.com/dfulftofe/image/upload/v1718164418/Recurso_4_copia_1_kjqrci.png" alt="">
+            <h1 class="bg2">SUBE DE NIVEL TU ESTILO</h1>
+            <img class="bg3" src="https://res.cloudinary.com/dfulftofe/image/upload/v1718164544/Group_371_kyts4q.png" alt="">
+            
+                    </div>
+                            <div class="main-content">
             <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
                 <div class="form-register-default">
                     <h1 class="title">Crear una cuenta</h1>
@@ -44,9 +49,9 @@
                     <div class="input-container password-container">
                         <label for="password" class="form-title">Contraseña</label>
                         <div class="password-wrapper">
-                            <input id="password" type="password" formControlName="password" name="password" placeholder="Escribe tu contraseña" />
-                            <div class="toggle-password" >
-                                <i class="fas fa-eye"></i>
+                            <input type="password" id="password" formControlName="password" name="password" placeholder="Escribe tu contraseña" [type]="passwordFieldType" />
+                            <div class="toggle-password" (click)="togglePasswordVisibility()">
+                                <i class="fas" [ngClass]="passwordFieldType === 'password' ? 'fa-eye' : 'fa-eye-slash'"></i>
                             </div>
                         </div>
                         <div *ngIf="registroForm.get('password')?.invalid && registroForm.get('password')?.touched">
@@ -76,7 +81,10 @@
             </form>
         </div>
     </div>
-    <script src="register.component.js"></script>
+
+    <script>
+        // Aquí puedes incluir scripts adicionales si es necesario
+    </script>
 </body>
 
 </html>
