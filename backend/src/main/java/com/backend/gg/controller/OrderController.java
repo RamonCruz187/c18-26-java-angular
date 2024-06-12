@@ -21,6 +21,7 @@ public class OrderController {
     private final OrderService orderService;
     private final OrderMapper orderMapper;
     @GetMapping("/get/order/{id}")
+    @CrossOrigin
     public ResponseEntity<?> getOrderById(@PathVariable Long id){
         try {
             Order order = orderService.get(id);
