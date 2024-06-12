@@ -12,7 +12,8 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">GAMER GODS</div>
+        <div class="logo"><img class="imgLogo" src="https://res.cloudinary.com/dfulftofe/image/upload/v1718030452/Logo_dixwzs.png" alt="Logo"></div>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
         <ul class="nav-links">
             <li class="nav-item dropdown">
                 <a href="javascript:void(0)"  (click)="viewDetails('COLECCIONABLE')" >Coleccionables</a>
@@ -66,16 +67,17 @@
             <i class="fas fa-search search-icon"></i>
             <input type="text" placeholder="Buscar">
         </div>
-        <div class="icons nav-links">
+        
+        <div class="icons">
             <div class="icon-item dropdown">
-                <i class="fas fa-shopping-cart "></i>
-                <ul class="dropdown-menu dropdown-menu-right ">
+                <img class="carrito" src="https://res.cloudinary.com/dfulftofe/image/upload/v1718031272/shopping_cart_skqt3a.png" alt="Shopping Cart">
+                <ul class="dropdown-menu dropdown-menu-right">
                     <li><a href="#">Ver carrito</a></li>
                     <li><a href="#">Finalizar compra</a></li>
                 </ul>
             </div>
             <div class="icon-item dropdown">
-                <i class="fas fa-user"></i>
+                <img class="perfil" src="https://res.cloudinary.com/dfulftofe/image/upload/v1718031093/Vector_tds2f1.png" alt="Profile">
                 <ul class="dropdown-menu dropdown-menu-right">
                     <li><a href="#">Iniciar sesión</a></li>
                     <li><a href="#">Registrarse</a></li>
@@ -85,5 +87,6 @@
             </div>
         </div>
     </nav>
+    <script src="nav-bar.component.js"></script>
 </body>
 </html>

@@ -4,6 +4,168 @@
 }
 
 /* Estilo para el banner principal */
+/* Asegúrate de ajustar las rutas a tus imágenes en el HTML */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: visible; /* Permite que la imagen del overlay sobresalga */
+}
+
+.banner {
+    background: radial-gradient(70.66% 123.48% at 49.81% 123.48%, #D72323 0%, #551010 100%);
+    color: white;
+    text-align: center;
+    height: 324px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.banner img {
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%; /* Ajusta según sea necesario */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible; /* Permite que la imagen del overlay sobresalga */
+}
+
+.overlay-image {
+    width: 50%; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    max-width: none; /* Asegura que la imagen no esté limitada por el contenedor */
+}
+
+.banner-container2 {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 150px;
+    margin-top: 60px;
+    overflow: visible; /* Permite que la imagen del overlay sobresalga */
+}
+.overlay2 {
+    position: absolute;
+    top:77%; /* Ajusta según sea necesario */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible; /* Permite que la imagen del overlay sobresalga */
+}
+
+.overlay-image2 {
+    width: 100%; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    max-width: none; /* Asegura que la imagen no esté limitada por el contenedor */
+}
+
+
+
+/* Media Queries para Responsividad */
+
+@media (max-width: 768px) {
+    .overlay-image {
+        width: 70%; /* Ajusta el tamaño para dispositivos más pequeños */
+    }
+
+}
+
+@media (max-width: 768px) {
+   
+    .overlay2 {
+        top:77%; /* Ajusta según sea necesario */
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay-image {
+        width: 90%; /* Ajusta el tamaño para dispositivos aún más pequeños */
+    }
+
+    .overlay2 {
+        top:38%; /* Ajusta según sea necesario */
+    }
+}
+
+@media (max-width: 428px) {
+   
+    .overlay2 {
+        top:52%; /* Ajusta según sea necesario */
+    }
+}
+
+
+@media (max-width: 414px) {
+   
+    .overlay2 {
+        top:50%; /* Ajusta según sea necesario */
+    }
+}
+
+@media (max-width: 393px) {
+   
+    .overlay2 {
+        top:48%; /* Ajusta según sea necesario */
+    }
+}
+@media (max-width: 390px) {
+   
+    .overlay2 {
+        top:47%; /* Ajusta según sea necesario */
+    }
+}
+
+@media (max-width: 375px) {
+   
+    .overlay2 {
+        top:45%; /* Ajusta según sea necesario */
+    }
+}
+
+@media (max-width: 360px) {
+   
+    .overlay2 {
+        top:43%; /* Ajusta según sea necesario */
+    }
+}
+
+@media (max-width: 320px) {
+   
+    .overlay2 {
+        top:38%; /* Ajusta según sea necesario */
+    }
+}
+
+@media (max-width: 270px) {
+   
+    .overlay2 {
+        top:27%; /* Ajusta según sea necesario */
+    }
+    
+}
+
+
 .banner {
     background: linear-gradient(45deg, #D72323, #551010);
     height: 324px;
@@ -12,7 +174,91 @@
 background: radial-gradient(70.66% 123.48% at 49.81% 123.48%, #D72323 0%, #551010 100%);
 margin-bottom: 60px;
 
+width: 100%; /* Puede ser cualquier valor, depende de tus necesidades */
+height: auto; /* Puede ser cualquier valor, depende de tus necesidades */
+max-width: 100%; /* Opcional: para limitar el tamaño máximo del contenedor */
+margin: 0 auto; /* Para centrar el contenedor en la página */
+
 }
+
+.banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Media Queries para Responsividad */
+
+@media (max-width: 768px) {
+
+    .overlay {
+       
+        top: 22%;
+    }
+
+
+    .overlay-image {
+        width: 80%; /* Ajusta el tamaño para dispositivos más pequeños */
+    }
+}
+
+@media (max-width: 1300px) {
+    .overlay {
+       
+        top: 62%;
+    }
+
+    .overlay-image {
+        width: 90%; /* Ajusta el tamaño para dispositivos aún más pequeños */
+    }
+}
+
+
+@media (max-width: 480px) {
+    .overlay {
+       
+        top: 62%;
+    }
+
+    .overlay-image {
+        width: 90%; /* Ajusta el tamaño para dispositivos aún más pequeños */
+    }
+}
+
+
+
+
+.overlay-text {
+    position: absolute;
+    top: 30%; /* Centra verticalmente */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* Asegura que esté sobre otras capas */
+    color: white;
+    text-align: center;
+}
+
+.overlay-text h1 {
+    margin: 0;
+    font-size: 2em; /* Ajusta el tamaño según sea necesario */
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+
+
 
 /* Estilo para el segundo banner */
 .banner2 {
@@ -26,15 +272,22 @@ margin-bottom: 60px;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 0 auto;
-margin-bottom: 40px;
+    margin: 20px auto;
 
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  
+
+
 }
+
+.banner2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 /* Estilo para la sección de introducción */
 .intro h1 {
@@ -64,66 +317,7 @@ margin-bottom: 40px;
     font-style: normal;
 }
 
-/* Estilo para el contenedor de categorías */
-.categorias {
-    display: flex;
-    justify-content: space-between;
-    padding: 90px 90px 0 90px;
-    margin: 0 auto;
-    flex-wrap: wrap;
 
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-
-    margin-bottom: 10px;
-}
-
-/* Estilo para cada categoría individual */
-.categoria {
-    background-color: #FF6C6C;
-    flex: 1 1 299px;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    position: relative;
-    height: 436px;
-    transition: transform 0.3s, filter 0.3s;
-}
-
-.categoria img {
-    display: block;
-    margin: 0 auto;
-    margin-top: 30px;
-    max-width: 100%;
-    height: auto;
-    filter: grayscale(100%) sepia(100%) hue-rotate(-50deg) saturate(300%) brightness(100%);
-    transition: filter 0.3s;
-}
-
-.categoria:hover img {
-    filter: none;
-}
-
-.nombre {
-    background-color: #861919;
-    color: white;
-    font-size: 32px;
-    width: 100%;
-    height: 86px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    box-sizing: border-box;
-}
 
 /* Estilo para los títulos */
 .titulo {
@@ -349,25 +543,33 @@ div .img{
 
 /* Media Queries para adaptarse a diferentes tamaños de pantalla */
 @media (max-width: 1200px) {
-    .categorias, .llegados, .servicios {
+ .llegados, .servicios {
         padding: 0 50px;
     }
     .banner2 {
         width: 90%;
     }
+
+    .intro h2 {
+        margin-bottom: 0px;
+    }
+
 }
 
 @media (max-width: 992px) {
-    .categorias, .llegados, .servicios {
+    .llegados, .servicios {
         padding: 0 30px;
     }
     .banner2 {
         width: 100%;
     }
+    .intro h2 {
+        margin-bottom: 0px;
+    }
 }
 
 @media (max-width: 768px) {
-    .categorias, .llegados, .servicios {
+ .llegados, .servicios {
         padding: 0 20px;
         flex-direction: column;
         align-items: center;
@@ -378,13 +580,18 @@ div .img{
     .nav-button {
         margin-top: 10%;
     }
-    .categoria, .llegado {
+.llegado {
         width: 100%;
     }
+
+    .intro h2 {
+        margin-bottom: 0px;
+    }
+
 }
 
 @media (max-width: 576px) {
-    .categorias, .llegados, .servicios {
+    .llegados, .servicios {
         padding: 0 10px;
     }
     .banner2 {
@@ -393,7 +600,7 @@ div .img{
     .nav-button {
         margin-top: 5%;
     }
-    .categoria, .llegado {
+    .llegado {
         width: 100%;
     }
     .intro h1 {
@@ -405,4 +612,142 @@ div .img{
     .intro h2 span {
         font-size: 24px;
     }
+    .intro h2 {
+        margin-bottom: 0px;
+    }
 }
+
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; /* Asegura que el padding y border se incluyan en el tamaño del elemento */
+}
+
+/* Estilo para el contenedor de categorías */
+.categorias {
+    display: flex;
+    justify-content: center; /* Centrar las categorías */
+    padding: 90px 15px; /* Padding ajustado para márgenes más pequeños en resoluciones menores */
+    margin: 0 auto;
+    flex-wrap: wrap;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Asegura que el padding y border se incluyan en el tamaño del contenedor */
+}
+
+/* Estilo para cada categoría individual */
+.categoria {
+    background-color: #FF6C6C;
+    flex: 1 1 299px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    position: relative;
+    height: 456px;
+    transition: transform 0.3s, filter 0.3s, height 0.3s, padding 0.3s;
+    box-sizing: border-box; /* Asegura que el padding y border se incluyan en el tamaño del elemento */
+}
+
+.categoria img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%) sepia(100%) hue-rotate(-50deg) saturate(300%) brightness(100%);
+    transition: filter 0.3s, max-height 0.3s, width 0.3s, height 0.3s;
+}
+
+.categoria:hover img {
+    filter: none;
+}
+
+.nombre {
+    background-color: #861919;
+    color: white;
+    font-size: 32px;
+    width: 100%;
+    height: 86px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    transition: font-size 0.3s, height 0.3s, padding 0.3s;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .categorias {
+        padding: 70px 10px 0 10px; /* Ajuste de padding para resoluciones menores */
+    }
+
+    .categoria {
+        flex: 1 1 45%; /* Dos elementos por fila */
+        height: 400px; /* Reducir altura */
+        padding: 15px; /* Ajustar padding */
+    }
+
+    .nombre {
+        font-size: 28px; /* Reducir tamaño de fuente */
+        height: 76px; /* Reducir altura del nombre */
+    }
+
+    .categoria img {
+        max-height: 280px; /* Ajustar la altura máxima de la imagen */
+    }
+}
+
+@media (max-width: 768px) {
+    .categorias {
+        padding: 50px 5px 0 5px; /* Ajuste de padding para resoluciones menores */
+    }
+
+    .categoria {
+        flex: 1 1 70%; /* Un elemento más grande */
+        height: 360px; /* Reducir altura */
+        padding: 20px; /* Ajustar padding */
+    }
+
+    .nombre {
+        font-size: 24px; /* Reducir tamaño de fuente */
+        height: 66px; /* Reducir altura del nombre */
+    }
+
+    .categoria img {
+        max-height: 260px; /* Ajustar la altura máxima de la imagen */
+    }
+}
+
+@media (max-width: 480px) {
+    .categorias {
+        padding: 30px 0 0 0; /* Ajuste de padding para resoluciones menores */
+    }
+
+    .categoria {
+        flex: 1 1 90%; /* Un elemento por fila */
+        height: 320px; /* Reducir altura */
+        padding: 25px; /* Ajustar padding */
+        margin: 10px auto; /* Centrar categorías horizontalmente */
+    }
+
+    .nombre {
+        font-size: 20px; /* Reducir tamaño de fuente */
+        height: 56px; /* Reducir altura del nombre */
+    }
+
+    .categoria img {
+        max-height: 240px; /* Ajustar la altura máxima de la imagen */
+    }
+}
+
+
