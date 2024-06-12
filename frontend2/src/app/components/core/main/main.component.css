@@ -495,55 +495,9 @@ color: #000000;
 }
 
 
-.nav-button {
-    border: none;
-    background-color: #D72323;
-    color: white;
-    font-size: 24px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-top: 17%;
-}
-
-.nav-button:hover {
-    background-color: #b71b1b;
-}
-
-.prev {
-    left: -60px;
-}
-
-.next {
-    right: -60px;
-}
-
-.llegados {
-    display: flex;
-    position: relative;
-    padding: 0 250px 50px 250px;
-    margin: 0 auto;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: nowrap;
-    overflow: hidden;
-}
-
-
-div .img{
-    display: flex;
-    position: relative;
-    margin: 0 auto;
-    justify-content: center;
-    flex-wrap: nowrap;
-    overflow: hidden;
-    width: 70%;
-    height: 70%;
-}
-
 /* Media Queries para adaptarse a diferentes tamaños de pantalla */
 @media (max-width: 1200px) {
- .llegados, .servicios {
+.servicios {
         padding: 0 50px;
     }
     .banner2 {
@@ -557,7 +511,7 @@ div .img{
 }
 
 @media (max-width: 992px) {
-    .llegados, .servicios {
+  .servicios {
         padding: 0 30px;
     }
     .banner2 {
@@ -569,7 +523,7 @@ div .img{
 }
 
 @media (max-width: 768px) {
- .llegados, .servicios {
+ .servicios {
         padding: 0 20px;
         flex-direction: column;
         align-items: center;
@@ -580,9 +534,6 @@ div .img{
     .nav-button {
         margin-top: 10%;
     }
-.llegado {
-        width: 100%;
-    }
 
     .intro h2 {
         margin-bottom: 0px;
@@ -591,7 +542,7 @@ div .img{
 }
 
 @media (max-width: 576px) {
-    .llegados, .servicios {
+  .servicios {
         padding: 0 10px;
     }
     .banner2 {
@@ -599,9 +550,6 @@ div .img{
     }
     .nav-button {
         margin-top: 5%;
-    }
-    .llegado {
-        width: 100%;
     }
     .intro h1 {
         font-size: 50px;
@@ -686,7 +634,7 @@ body {
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 1024px) {
+@media (max-width: 1424px) {
     .categorias {
         padding: 70px 10px 0 10px; /* Ajuste de padding para resoluciones menores */
     }
@@ -750,4 +698,192 @@ body {
     }
 }
 
+/* Estilo para los llegados */
+.llegados {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
 
+.nav-button {
+    flex-shrink: 0;
+    background-color: #FFE7E7;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.nav-button:hover {
+    background-color: #FFB6B6;
+}
+
+/* Estilo para los llegados */
+.llegados {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botón de navegación */
+.nav-button {
+    flex-shrink: 0;
+    background-color: #FFE7E7;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.nav-button:hover {
+    background-color: #FFB6B6;
+}
+
+.llegado {
+    background-color: #FFE7E7;
+    flex: 1 1 250px; /* Reducir el ancho mínimo */
+    max-width: 380px; /* Ajustar el ancho máximo si es necesario */
+    margin: 5px; /* Reducir el margen para que los elementos estén más juntos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 466px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    overflow: hidden;
+}
+
+.llegado:hover {
+    transform: scale(1.03);
+}
+
+/* Estilo para la imagen dentro del div llegado */
+.img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.img img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilo para el contenedor de nombre, precio y juego */
+.nombre2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ajustado para ocupar todo el ancho disponible */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.nombre2 .info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.nombre2 .name {
+    width: 50%; /* Ocupa el 50% del espacio */
+}
+
+.nombre2 .precio {
+    width: 30%; /* El 30% restante */
+    margin-left: 20px; /* Añadimos un espacio de margen entre name y precio */
+}
+
+.nombre2 .juego {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-bottom: 10px;
+}
+
+.nombre2 input[type="button"] {
+    align-self: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #FFB6B6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nombre2 input[type="button"]:hover {
+    background-color: #FF7F7F;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .llegados {
+        padding: 0 20px 20px 20px;
+        gap: 20px;
+    }
+
+    .llegado {
+        flex: 1 1 calc(33.33% - 40px); /* Ajustado para ocupar un tercio del contenedor */
+    }
+
+    .nombre2 {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .llegados {
+        flex-wrap: wrap;
+        padding: 0 10px 10px 10px;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .llegado {
+        flex: 1 1 calc(50% - 20px); /* Ajustado para ocupar la mitad del contenedor */
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .nombre2 {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .llegados {
+        padding: 0 10px 10px 10px;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .llegado {
+        flex: 1 1 calc(100% - 20px); /* Ajustado para ocupar todo el ancho del contenedor */
+    }
+
+    .nombre2 {
+        padding: 5px;
+    }
+}
