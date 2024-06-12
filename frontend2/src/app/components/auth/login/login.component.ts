@@ -9,16 +9,16 @@ import { HttpServiceService } from 'src/app/services/http-service.service';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
+  passwordFieldType: string = 'password';
   token: any;
   user: any;
 
-  constructor(private data:HttpServiceService, private fb: FormBuilder) {
+  constructor(private data: HttpServiceService, private fb: FormBuilder) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
-
-   }
+  }
 
   ngOnInit(): void {
   }
@@ -41,6 +41,10 @@ export class LoginComponent implements OnInit {
     } else {
       console.log('El formulario es inválido');
     }
+  }
+
+  togglePasswordVisibility() {
+    this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password';
   }
 
 }

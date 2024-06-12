@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-coleccionables: any;
+  coleccionables: any;
+  menuActive: boolean = false;
 
   constructor(private router: Router) { }
 
@@ -17,7 +18,9 @@ coleccionables: any;
   viewDetails(categoria: any) {
     console.log(categoria);
     this.router.navigate(['/catalogo', categoria]);
-    
   }
 
+  toggleMenu() {
+    this.menuActive = !this.menuActive;
+  }
 }
