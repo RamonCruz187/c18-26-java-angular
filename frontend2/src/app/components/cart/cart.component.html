@@ -16,18 +16,21 @@
       <tr>
         <th scope="col" class="recuadro">Producto</th>
         <th scope="col" class="recuadro">Precio</th>
-        <th scope="col" class="recuadro">Cantidad</th>
+        <th scope="col" class="recuadro3">Cantidad</th>
         <th scope="col" class="recuadro">Precio Total</th>
         <th scope="col" class="recuadro">Eliminar</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let product of cart$ | async; let i = index"  class="linea">
-        <td><div><img [src]="product.product.image"[alt]="" style="width: 50px; height: 50px;"></div><div>{{ product.product.name }}</div> </td>
+        
+        <td class="img-desc"><div><img [src]="product.product.image"[alt]="" id="img" ></div><div id="descr">{{ product.product.name }}</div></td>
+         
         <td>{{ product.product.price }}</td>
-        <div class="quantity-control">
-        <button class="boton">-</button><span>{{product.quantity}}</span><button class="boton">+</button>  
-        </div>  
+      
+        <td><div class="quantity-control">
+        <button class="boton" id="mas-menos">-</button><span>{{product.quantity}}</span><button class="boton">+</button>  
+        </div></td>  
         <td>{{ product.product.price*product.quantity}}</td>
         <td><button (click)="removeFromCart(i)" class="eliminar">X</button></td>
       </tr>      
