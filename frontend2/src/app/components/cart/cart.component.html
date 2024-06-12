@@ -23,7 +23,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let product of cart$ | async; let i = index"  class="linea">
-        <td>{{ product.product.name }}</td>
+        <td><div><img [src]="product.product.image"[alt]="" style="width: 50px; height: 50px;"></div><div>{{ product.product.name }}</div> </td>
         <td>{{ product.product.price }}</td>
         <div class="quantity-control">
         <button class="boton">-</button><span>{{product.quantity}}</span><button class="boton">+</button>  
@@ -42,7 +42,7 @@
   <h3>Rápido</h3><h5 id="dias"> de 1 a 3 días $500 {{ getTotalPrice()+500 | currency }}</h5><button class="button3">Seleccionar</button>
   </div>
   
-  <div class="total">Total: {{ getTotalPrice() | currency }}</div>
+  <div class="total"><h3>Total: {{ getTotalPrice() | currency }}</h3></div>
   <div class="container">
   <button (click)="clearCart()" class="button3">Seguir comprando</button><!--seguir comprando-->  
   <button class="button3" >Pagar</button>

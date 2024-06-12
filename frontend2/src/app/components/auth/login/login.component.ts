@@ -33,10 +33,9 @@ export class LoginComponent implements OnInit {
       ).subscribe(data => {
         this.token=data.jwt;
         this.user=data.user;
-        console.log(this.loginForm.value);
         console.log(this.token);
         console.log(this.user);
-        console.log("registro exitoso");
+        console.log("login exitoso");
       })
       //console.log(this.loginForm.value);  // Aquí obtenemos solo los valores del formulario
     } else {
