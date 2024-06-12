@@ -1,6 +1,11 @@
 <app-nav-bar></app-nav-bar>
 
-<h1>Carrito</h1>
+<div class="container1">
+  <div>
+<span class="carrito">Carrito</span>
+</div>  
+<div class="circulo">3</div>   
+</div>
 <div class="table-container">
 <div *ngIf="(cart$ | async)?.length === 0">
     <p>The cart is empty.</p>
@@ -11,18 +16,21 @@
       <tr>
         <th scope="col" class="recuadro">Producto</th>
         <th scope="col" class="recuadro">Precio</th>
-        <th scope="col" class="recuadro">Cantidad</th>
+        <th scope="col" class="recuadro3">Cantidad</th>
         <th scope="col" class="recuadro">Precio Total</th>
         <th scope="col" class="recuadro">Eliminar</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let product of cart$ | async; let i = index"  class="linea">
-        <td><div><img [src]="product.product.image"[alt]="" style="width: 50px; height: 50px;"></div><div>{{ product.product.name }}</div> </td>
+        
+        <td class="img-desc"><div><img [src]="product.product.image"[alt]="" id="img" ></div><div id="descr">{{ product.product.name }}</div></td>
+         
         <td>{{ product.product.price }}</td>
-        <div class="quantity-control">
-        <button class="boton">-</button><span>{{product.quantity}}</span><button class="boton">+</button>  
-        </div>  
+      
+        <td><div class="quantity-control">
+        <button class="boton" id="mas-menos">-</button><span>{{product.quantity}}</span><button class="boton">+</button>  
+        </div></td>  
         <td>{{ product.product.price*product.quantity}}</td>
         <td><button (click)="removeFromCart(i)" class="eliminar">X</button></td>
       </tr>      
@@ -33,8 +41,8 @@
   <div class =borde>
   <h3>Estándar</h3><h5> de 3 a 5 días $200 {{ getTotalPrice()+200 | currency }}</h5><button class="button3">Seleccionar</button>
   </div>
-  <div class =borde>
-  <h3>Rápido</h3><h5 > de 1 a 3 días $500 {{ getTotalPrice()+500 | currency }}</h5><button class="button3">Seleccionar</button>
+  <div class="borde2">
+  <h3>Rápido</h3><h5 id="dias"> de 1 a 3 días $500 {{ getTotalPrice()+500 | currency }}</h5><button class="button3">Seleccionar</button>
   </div>
   
   <div class="total"><h3>Total: {{ getTotalPrice() | currency }}</h3></div>
