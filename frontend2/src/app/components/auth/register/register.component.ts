@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpServiceService } from 'src/app/services/http-service.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -9,35 +8,33 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   registroForm: FormGroup;
+  showPassword: boolean = false;
 
-  constructor(private data:HttpServiceService, private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder) {
     this.registroForm = this.fb.group({
       name: ['', Validators.required],
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]]
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      terms: [false, Validators.requiredTrue]
     });
   }
 
-  ngOnInit(): void {
-  }
-  onSubmit() {
-    if (this.registroForm.valid) {
-      this.data.newUser({
-        "name":this.registroForm.value.name,
-        "lastName": this.registroForm.value.lastName,
-        "email": this.registroForm.value.email,
-        "password": this.registroForm.value.password
-      }
-       
-      ).subscribe(data => {
-        console.log(this.registroForm.value);
-        console.log("registro exitoso");
-      })
-      //console.log(this.registroForm.value);
-    } else {
-      console.log('El formulario es inválido');
+  ngOnInit(): void {}
+
+  togglePasswordVisibility(): void {
+    this.showPassword = !this.showPassword;
+    if (this.showPassword) {
+      alert(`La contraseña ingresada es: ${this.registroForm.get('password')?.value}`);
     }
   }
 
+  onSubmit(): void {
+    if (this.registroForm.valid) {
+      // Handle form submission
+      console.log('Form submitted', this.registroForm.value);
+    } else {
+      console.log('Form not valid');
+    }
+  }
 }

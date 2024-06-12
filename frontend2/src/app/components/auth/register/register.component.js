@@ -6,6 +6,7 @@ function togglePasswordVisibility() {
         passwordInput.type = 'text';
         toggleIcon.classList.remove('fa-eye');
         toggleIcon.classList.add('fa-eye-slash');
+        alert(`La contraseña ingresada es: ${passwordInput.value}`);
     } else {
         passwordInput.type = 'password';
         toggleIcon.classList.remove('fa-eye-slash');
@@ -14,5 +15,8 @@ function togglePasswordVisibility() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.toggle-password').addEventListener('click', togglePasswordVisibility);
+    const togglePassword = document.querySelector('.toggle-password');
+    if (togglePassword) {
+        togglePassword.addEventListener('click', togglePasswordVisibility);
+    }
 });
