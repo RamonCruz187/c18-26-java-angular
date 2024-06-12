@@ -9,16 +9,14 @@ import { HttpServiceService } from 'src/app/services/http-service.service';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
-  token: any;
-  user: any;
+  passwordFieldType: string = 'password';
 
-  constructor(private data:HttpServiceService, private fb: FormBuilder) {
+  constructor(private data: HttpServiceService, private fb: FormBuilder) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
-
-   }
+  }
 
   ngOnInit(): void {
   }
@@ -28,20 +26,18 @@ export class LoginComponent implements OnInit {
       this.data.login({
         "email": this.loginForm.value.email,
         "password": this.loginForm.value.password
-      }
-       
-      ).subscribe(data => {
-        this.token=data.jwt;
-        this.user=data.user;
+      }).subscribe(data => {
         console.log(this.loginForm.value);
-        console.log(this.token);
-        console.log(this.user);
-        console.log("registro exitoso");
-      })
-      //console.log(this.loginForm.value);  // Aquí obtenemos solo los valores del formulario
+        console.log("Inicio de sesión exitoso");
+        // Aquí puedes manejar la respuesta del servicio (como guardar tokens, redireccionar, etc.)
+      });
     } else {
       console.log('El formulario es inválido');
     }
+  }
+
+  togglePasswordVisibility() {
+    this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password';
   }
 
 }

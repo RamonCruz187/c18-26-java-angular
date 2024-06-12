@@ -8,14 +8,17 @@
     <link rel="stylesheet" href="register.component.css">
     <!-- Incluir Font Awesome para los iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="register.component.js"></script>
-
 </head>
 
 <body>
     <div class="container">
-        <div class="sidenav-bg"></div>
-        <div class="main-content">
+        <div class="sidenav-bg">
+            <img class="bg1" src="https://res.cloudinary.com/dfulftofe/image/upload/v1718164418/Recurso_4_copia_1_kjqrci.png" alt="">
+            <h1 class="bg2">SUBE DE NIVEL TU ESTILO</h1>
+            <img class="bg3" src="https://res.cloudinary.com/dfulftofe/image/upload/v1718164544/Group_371_kyts4q.png" alt="">
+            
+                    </div>
+                            <div class="main-content">
             <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
                 <div class="form-register-default">
                     <h1 class="title">Crear una cuenta</h1>
@@ -44,18 +47,18 @@
                         </div>
                     </div>
                     <div class="input-container password-container">
-                      <label for="password" class="form-title">Contraseña</label>
-                      <div class="password-wrapper">
-                          <input [type]="showPassword ? 'text' : 'password'" id="password" formControlName="password" name="password" placeholder="Escribe tu contraseña" />
-                          <button type="button" class="toggle-password" (click)="togglePasswordVisibility()">
-                              <i class="fas" [class.fa-eye]="!showPassword" [class.fa-eye-slash]="showPassword"></i>
-                          </button>
-                      </div>
-                      <div *ngIf="registroForm.get('password')?.invalid && registroForm.get('password')?.touched">
-                          <div *ngIf="registroForm.get('password')?.errors?.['required']" class="error-message">La contraseña es obligatoria.</div>
-                          <div *ngIf="registroForm.get('password')?.errors?.['minlength']" class="error-message">La contraseña debe tener al menos 6 caracteres.</div>
-                      </div>
-                  </div>
+                        <label for="password" class="form-title">Contraseña</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="password" formControlName="password" name="password" placeholder="Escribe tu contraseña" [type]="passwordFieldType" />
+                            <div class="toggle-password" (click)="togglePasswordVisibility()">
+                                <i class="fas" [ngClass]="passwordFieldType === 'password' ? 'fa-eye' : 'fa-eye-slash'"></i>
+                            </div>
+                        </div>
+                        <div *ngIf="registroForm.get('password')?.invalid && registroForm.get('password')?.touched">
+                            <div *ngIf="registroForm.get('password')?.errors?.['required']" class="error-message">La contraseña es obligatoria.</div>
+                            <div *ngIf="registroForm.get('password')?.errors?.['minlength']" class="error-message">La contraseña debe tener al menos 6 caracteres.</div>
+                        </div>
+                    </div>
                     <div class="checkbox-container">
                         <input type="checkbox" id="terms" name="terms" />
                         <label for="terms">Acepto términos y condiciones</label>
@@ -78,6 +81,10 @@
             </form>
         </div>
     </div>
+
+    <script>
+        // Aquí puedes incluir scripts adicionales si es necesario
+    </script>
 </body>
 
 </html>
