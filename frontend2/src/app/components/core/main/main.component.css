@@ -337,98 +337,6 @@ color: #000000;
 
 }
 
-/* Estilo para los llegados */
-.llegados {
-    display: flex;
-    padding: 0 250px 50px 250px;
-    margin: 0 auto;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    
-}
-
-/* Estilo para cada elemento llegado */
-.llegado {
-    background-color: #FFE7E7;
-    flex: 1 1 358px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    position: relative;
-    height: 466px;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s;
-    margin-bottom: 70px;
-
-}
-
-.llegado:hover {
-    transform: scale(1.03);
-}
-
-/* Estilo para la imagen dentro del div llegado */
-.llegado img {
-    display: block;
-    margin: 0 auto;
-    margin-top: 10px;
-    max-width: 100%;
-    height: auto;
-}
-
-.nombre2 {
-    margin-left: 20px;
-    color: #141416;
-    font-size: 16px;
-    width: 96%;
-    text-align: left;
-    padding: 10px;
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 30%;
-
-
-}
-
-.nombre2 .name {
-    margin-right: 50%;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 24px;
-}
-
-.nombre2 .precio {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 24px;
-    color: #D72323;
-}
-
-/* Estilo para botones */
-input[type="button"] {
-    border-radius: 30px;
-    background-color: #D72323;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 15px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
 /* Estilo para el contenedor de servicios */
 .servicios {
     display: flex;
@@ -722,6 +630,92 @@ body {
 .nav-button:hover {
     background-color: #FFB6B6;
 }
+/*llegado viejo*/
+
+/* Estilo para los llegados */
+.llegados {
+    display: flex;
+    padding: 0 250px 50px 250px;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Estilo para cada elemento llegado */
+.llegado {
+    background-color: #FFE7E7;
+    flex: 1 1 358px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    height: 466px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    margin-bottom: 70px;
+}
+
+.llegado:hover {
+    transform: scale(1.03);
+}
+
+/* Estilo para la imagen dentro del div llegado */
+.llegado img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+.nombre2 {
+    color: #141416;
+    font-size: 16px;
+    text-align: left;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 30%;
+}
+
+.nombre2 .name {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.nombre2 .precio {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+    color: #D72323;
+}
+
+/* Estilo para botones */
+input[type="button"] {
+    border-radius: 30px;
+    background-color: #D72323;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding-left: 30px;
+    padding-right: 30px;
+}
 
 /* Estilo para los llegados */
 .llegados {
@@ -740,8 +734,8 @@ body {
     border: none;
     cursor: pointer;
     font-size: 24px;
-    padding: 10px;
-    border-radius: 50%;
+    padding: 20px;
+    border-radius: 100%;
 }
 
 .nav-button:hover {
@@ -774,12 +768,14 @@ body {
     width: 100%;
     height: auto;
     flex-shrink: 0;
+    background-color: hsla(0, 0%, 100%, 0.671);
+    border-radius: 5px;
 }
 
 .img img {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 55%;
     height: auto;
 }
 
@@ -792,7 +788,6 @@ body {
     width: 100%; /* Ajustado para ocupar todo el ancho disponible */
     padding: 20px;
     box-sizing: border-box;
-    background-color: #fff;
     border-radius: 10px;
     margin-top: auto;
     margin-bottom: 20px;
@@ -808,11 +803,11 @@ body {
 }
 
 .nombre2 .name {
-    width: 50%; /* Ocupa el 50% del espacio */
+    width: 60%; /* Ocupa el 50% del espacio */
 }
 
 .nombre2 .precio {
-    width: 30%; /* El 30% restante */
+    width: 20%; /* El 30% restante */
     margin-left: 20px; /* Añadimos un espacio de margen entre name y precio */
 }
 
@@ -833,6 +828,11 @@ body {
 
 .nombre2 input[type="button"]:hover {
     background-color: #FF7F7F;
+}
+
+/* Estilo para el elemento seleccionado */
+.llegado.seleccionado {
+    background-color: #ff000034; /* Filtro rojo leve */
 }
 
 /* Responsive adjustments */
