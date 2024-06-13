@@ -4,190 +4,318 @@
     box-sizing: border-box; 
 }
    
-.banner{ 
-    margin:0;
-    padding:0;   
+.banner {
+    margin: 0;
+    padding: 0;
     margin-top: 0px;
-    width: 100% ;
-    height: 150px ;       
-    background: radial-gradient(ellipse at center,#d72323 0%,#551010 100%);
+    width: 100%;
+    height: 150px;
+    background: radial-gradient(ellipse at center, #d72323 0%, #551010 100%);
+    display: flex; /* Usamos flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    position: relative; /* Posicionamos el banner relativo para que sus hijos puedan ser posicionados */
+    overflow: hidden; /* Aseguramos que el contenido no se desborde */
 }
-.titulo{
-    padding-top: 80px;
+
+.banner p {
+    width: 449px;
+    height: 70px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Asegura que el texto esté centrado dentro del <p> */
     text-align: center;
     color: #FFFFFF;
-    font-family: "Poppins", sans-serif;
-    font-weight:bolder;
-    font-size: 40px;      
-    
-}
-.flex2{
-    display: flex;       
-    justify-content:space-evenly;
-   
-
-}
-.flex{
-    width: 100%;
-    display: flex;       
-    justify-content:space-evenly;    
-
-}
-.container1{
-    margin-top: 90px;    
-    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative; /* Posicionamos el texto relativo para que quede por delante */
+    z-index: 2; /* Aseguramos que el texto esté por delante de la imagen */
 }
 
-.volver{
-    margin-top: 10px;
-    margin-left: 60px;    
-    font-family: "Poppins", sans-serif;
-    color: #861919;
-    display: flex;    
-    justify-content: flex-start;
+.banner img {
+    position: absolute; /* Posicionamos la imagen absolutamente dentro del banner */
+    top: 50%; /* Centra la imagen verticalmente */
+    left: 50%; /* Centra la imagen horizontalmente */
+    width: auto; /* Ajusta el ancho automáticamente */
+    height: 125%; /* Incrementa la altura para agrandar la imagen */
+    transform: translate(-50%, -50%); /* Centra la imagen */
+    object-fit: contain; /* Contiene la imagen para que no se corte */
+    filter: brightness(0.5) saturate(1.5) hue-rotate(-20deg); /* Aplica un filtro rosa o variante de rojo */
+    z-index: 1; /* Asegura que la imagen esté por detrás del texto */
+    transition: filter 0.3s ease; /* Transición suave para el filtro */
 }
-.filter{
-    margin-right: 80px;
+
+.banner img:hover {
+    filter: none; /* Quita el filtro al pasar el cursor */
+}
+
+
+/* Media queries para ajustar en diferentes dispositivos */
+@media (max-width: 768px) {
+    .banner {
+        height: 25vh; /* Ajusta la altura del banner en dispositivos más pequeños */
+    }
+
+    .banner p {
+        font-size: 7vw; /* Ajusta el tamaño de la fuente en dispositivos más pequeños */
+    }
+
+    .banner img {
+        height: 35%; /* Ajusta la altura de la imagen en dispositivos más pequeños */
+        position: absolute; /* Posicionamos la imagen absolutamente dentro del banner */
+        top:50%; /* Centra la imagen verticalmente */
+        left: 50%; /* Centra la imagen horizontalmente */
+        
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 30vh; /* Ajusta la altura del banner en dispositivos más pequeños */
+    }
+
+    .banner p {
+        font-size: 8vw; /* Ajusta el tamaño de la fuente en dispositivos más pequeños */
+    }
+
+    .banner img {
+        height: 110%; /* Ajusta la altura de la imagen en dispositivos más pequeños */
+    }
+}
+
+.container1 {
+    height: 84px;
+    margin: 40px;
+    margin-top: 0px;
     display: flex;
-    justify-content: flex-end;    
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
 }
-.container2{
-    display:flex;
-    margin-top: 90px;
+
+.volver {
+    height: 43px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #861919;
+}
+
+.filter {
+    cursor: pointer;
+    margin-right: 0; /* Asegura que .filter esté alineado a la derecha */
+    display: flex;
+    align-items: center; /* Centra verticalmente la imagen */
+}
+
+
+.container2 {
+    display: flex;
     flex-wrap: wrap;
-    gap: 26px;  
-    margin-left: 150px;  
-   
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    gap: 36px;
+    margin: 40px;
 }
-div[class^='item']{
-   
-    width: 255px;
-    height: 383px;
+
+
+
+div[class^='item'] {
+    width: 300px;
+    height: 400px;
     font-size: 40px;
-    padding: 10px;
-    box-sizing: border-box;    
-    border-radius: 5px ;
+    padding: 0; /* Removemos el padding */
+    box-sizing: border-box;
+    border-radius: 20px;
     background-color: #FFE7E7;
-    margin-bottom :150px ;    
-    box-shadow: 0px 1px 10px  #aca9a9; 
-    cursor:default;
+    margin-bottom: 20px;
+    cursor: default;
     transition: all 400ms ease;
-    margin-left: 20px;
-    margin-right: 20px;
-
-    
-}
-div[class^='item']:hover{
-    box-shadow: 5px 5px 20px  #828181;
-    transform: translateY(-3%);
-}
-.card img{      
-    
-    width:60%;
-    margin-bottom: 0px;
-    margin-left: 15px;
-    margin-top: 15px;
-}
-.img{
-
-    margin-top: 10px;
-    margin-left: 30px;
-
-}
-
-.descripcion{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* sombra solo en la parte inferior */
     display: flex;
     flex-direction: column;
-    margin-top: 5px;
-    width:100%;
-    height: 40px;
 }
-.name {
 
-    padding-left: 14px;
-    display:block;   
-    font-family: "Poppins", sans-serif;    
-    font-size: 15px;
+div[class^='item']:hover {
+    box-shadow: 5px 5px 20px #828181;
+    transform: translateY(-3%);
+    background-color: #ff000034; /* Filtro rojo leve */
+}
+
+.card {
+    cursor: pointer;
+
+    width: 100%;
+    height: 60%; /* Ocupa el 60% del item */
+    border-radius: 20px 20px 0 0; /* Ajusta el borde superior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Esconde cualquier contenido que sobresalga */
+}
+
+
+.cardimg{
+    margin-top: 10px;
+    background-color: hsla(0, 0%, 100%, 0.671);
+  
+    width: 85%;
+    height: 90%;
+    border-radius: 5%;
+}
+
+.card img {
+   width: 80%;
+   height: 100%;
+    object-fit: contain; /* Asegura que la imagen esté contenida dentro del div */
+    display: block;
+    margin: auto;
+}
+
+.descripcion {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40%; /* Ocupa el 40% del item */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.name {
+    display: block;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+
+    font-size: 16px;
+    color: #181818;
+
     
 }
+
 .precio {
-  
     font-family: "Poppins", sans-serif;
     font-style: bold;
-    font-size: 14px;
     color: #000000;
-    padding-left: 14px;
-    font-weight: bold;
     display: block;
-    margin-bottom: 20px;
- 
+    font-weight: 600;
+    font-size: 22px;
+    color: #861919;
+    margin-bottom: 4%;
+
 }
+
 input[type="button"] {
-    
-    border-radius: 30px;
-    background-color: #D72323;
-    align-items: center;
+   
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 5px;
+    margin-top: 15px;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
-    padding-left: 30px;
-    padding-right: 30px;    
-    transition: background-color 0.3s ease;
-    width: 60%;
-}
-input[type="button"]:hover{
-    background-color: #861919
-}
-
-
-.circulo{
-
-    padding-top: 5px;
-    text-align: center;
-    width: 30px;
-    height: 30px;
-    background-color: #D72323;
-    color:#f9f8f8;
-    box-sizing: border-box;
-    border-color: #d72323;
-    border-radius: 200px;
-    justify-content: center;
-    
-}
-.flex2{
    
-    display: flex;
-    justify-content:center;
-    margin-bottom: 100px;
+    align-self: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: hsl(0, 95%, 62%);
 
-    
-}
-.circulo1{
-    
-    padding-top: 3px;
-    width: 30px;
-    height: 30px;
-    text-align: center;
+    border: none;
     border-radius: 100px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #f87575;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espacio entre los círculos */
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f9f8f8;
+    color: #D72323;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.circle.arrow{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #D72323;
+    color: #f9f8f8;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.circle.arrow i {
+    font-size: 20px; /* Ajusta el tamaño del icono */
+}
+
+.circle.number {
     border: 3px solid #d72323;
+}
+
+.circle.selected {
+    background-color: #861919;
+    color: white;
+}
+
+/* Estilo específico para el botón seleccionado */
+.circle.selected {
+    width: 40px;
+    height: 40px;
+    border: none;
+}
+
+/* Media queries para ajustar en diferentes dispositivos */
+@media (max-width: 768px) {
+    .circle {
+        width: 30px;
+        height: 30px;
+    }
+    .circle.arrow {
+        width: 30px;
+        height: 30px;
+    }
+    .circle.arrow i {
+        font-size: 10px; /* Ajusta el tamaño del icono */
     
+    }
 }
-#espacio1{
-    transform: rotate(180deg);
-    margin-right: 6px;
-}
-#espacio{
-    margin-right: 6px;
-}
-#marca{
-    margin-bottom: 50px;;
-}
+
+
 @media (max-width: 1200px) {
     .container2 {
       margin-left: 50px; /* Ajusta el margen para pantallas medianas */
@@ -205,3 +333,18 @@ input[type="button"]:hover{
 
 
 
+  .banner3-image {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    position: relative;
+    width: 100%; /* Asegura que ocupe todo el ancho de la página */
+    padding: 20px 0; /* Espacio alrededor de la imagen */
+    overflow: hidden; /* Esconde cualquier contenido que sobresalga del contenedor */
+}
+
+.banner3-image img {
+    margin: 50px;
+    filter: invert(0.5) brightness(0.3); /* Ajusta el filtro para teñir la imagen de un gris muy oscuro */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor adecuadamente */
+}
