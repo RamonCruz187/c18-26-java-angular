@@ -1,57 +1,77 @@
 <app-nav-bar></app-nav-bar>
 
-<div class="container1">
-  <div>
-<span class="carrito">Carrito</span>
-</div>  
-<div class="circulo">3</div>   
+<div class="titulo">
+    <span class="carrito">Carrito</span>
 </div>
-<div class="table-container">
-<div *ngIf="(cart$ | async)?.length === 0">
-    <p>The cart is empty.</p>
-  </div>
-<div>
-    <table class="table" >
-    <thead class="linea">
-      <tr>
-        <th scope="col" class="recuadro">Producto</th>
-        <th scope="col" class="recuadro">Precio</th>
-        <th scope="col" class="recuadro3">Cantidad</th>
-        <th scope="col" class="recuadro">Precio Total</th>
-        <th scope="col" class="recuadro">Eliminar</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let product of cart$ | async; let i = index"  class="linea">
+
+<div class="estado">
+
+    <div>
+        <table class="columna">
+            <thead class="thead">
+                <tr>
+                  <th scope="col" class="recuadro producto-col">Producto</th>
+                  <th scope="col" class="recuadro">Nombre</th>
+                    <th scope="col" class="recuadro">Precio</th>
+                    <th scope="col" class="recuadro">Cantidad</th>
+                    <th scope="col" class="recuadro">Precio Total</th>
+                    <th scope="col" class="recuadro">Eliminar</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr *ngFor="let product of cart$ | async; let i = index" class="linea">
+                    <td class="imagen">
+                      <div class="image">
+                        <img [src]="product.product.image" alt="" class="img">
+                      </div>
+                    </td>
+                    <td class="nombre">{{ product.product.name }}</td>
+                    <td class="precio">${{ product.product.price }}</td>
+                    <td>
+                        <div class="quantity-control">
+                            <button class="boton">-</button>
+                            <span>{{ product.quantity }}</span>
+                            <button class="boton">+</button>
+                        </div>
+                    </td>
+                    <td class="precio">${{ product.product.price * product.quantity }}</td>
+                    <td>
+                        <button (click)="removeFromCart(i)" class="eliminar">X</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+      <div class="vacio" *ngIf="(cart$ | async)?.length === 0">
+          <h1>El carro está vacío</h1>
+      </div>
+
+
+
+        <h4>Envío</h4>
+        <div class="borde">
+            <h3>Estándar</h3>
+            <h5>Demora entre 3 a 5 días {{ getTotalPrice() + 200 | currency }}</h5>
+            <button class="button3">Seleccionar</button>
+        </div>
+        <div class="borde2">
+            <h3>Rápido</h3>
+            <h5 id="dias">Demora entre 3 a 5 días {{ getTotalPrice() + 500 | currency }}</h5>
+            <button class="button3">Seleccionar</button>
+        </div>
+
+        <div class="total">
+            <h3>Total: {{ getTotalPrice() | currency }}</h3>
+        </div>
         
-        <td class="img-desc"><div><img [src]="product.product.image"[alt]="" id="img" ></div><div id="descr">{{ product.product.name }}</div></td>
-         
-        <td>{{ product.product.price }}</td>
-      
-        <td><div class="quantity-control">
-        <button class="boton" id="mas-menos">-</button><span>{{product.quantity}}</span><button class="boton">+</button>  
-        </div></td>  
-        <td>{{ product.product.price*product.quantity}}</td>
-        <td><button (click)="removeFromCart(i)" class="eliminar">X</button></td>
-      </tr>      
-    </tbody>   
-  </table>
- 
-  <h4>Envío</h4>
-  <div class =borde>
-  <h3>Estándar</h3><h5> de 3 a 5 días $200 {{ getTotalPrice()+200 | currency }}</h5><button class="button3">Seleccionar</button>
-  </div>
-  <div class="borde2">
-  <h3>Rápido</h3><h5 id="dias"> de 1 a 3 días $500 {{ getTotalPrice()+500 | currency }}</h5><button class="button3">Seleccionar</button>
-  </div>
-  
-  <div class="total"><h3>Total: {{ getTotalPrice() | currency }}</h3></div>
-  <div class="container">
-  <button (click)="clearCart()" class="button3">Seguir comprando</button><!--seguir comprando-->  
-  <button class="button3" >Pagar</button>
- 
-  </div>
-</div>
+        <div class="container">
+            <button (click)="clearCart()" class="button3">Seguir comprando</button>
+            <button class="pago">Pagar</button>
+        </div>
+    </div>
 </div>
 
 <app-footer></app-footer>
