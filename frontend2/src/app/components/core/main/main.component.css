@@ -841,6 +841,8 @@ input[type="button"] {
     background-color: #ff000034; /* Filtro rojo leve */
 }
 
+
+
 /* Responsive adjustments */
 @media (max-width: 1200px) {
     .llegados {
