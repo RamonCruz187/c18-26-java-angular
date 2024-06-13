@@ -496,6 +496,7 @@ body {
 
 /* Estilo para cada categoría individual */
 .categoria {
+    cursor: pointer;
     background-color: #FF6C6C;
     flex: 1 1 299px;
     margin: 20px;
@@ -762,22 +763,27 @@ input[type="button"] {
 .llegado:hover {
     transform: scale(1.03);
 }
-
-/* Estilo para la imagen dentro del div llegado */
+/* Estilo para el contenedor de imagen */
 .img {
     width: 100%;
-    height: auto;
+    height: 65%;
     flex-shrink: 0;
     background-color: hsla(0, 0%, 100%, 0.671);
     border-radius: 5px;
+    display: flex; /* Usamos flexbox para centrar vertical y horizontalmente */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    overflow: hidden; /* Para ocultar cualquier parte de la imagen que sobresalga del contenedor */
 }
 
+/* Estilo para la imagen dentro del contenedor */
 .img img {
-    display: block;
-    margin: 0 auto;
-    max-width: 55%;
-    height: auto;
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen al 100% del contenedor */
+    max-height: 100%; /* Ajusta la altura máxima de la imagen al 100% del contenedor */
+    width: auto; /* Ajusta automáticamente el ancho para mantener la relación de aspecto */
+    height: auto; /* Ajusta automáticamente la altura para mantener la relación de aspecto */
 }
+
 
 /* Estilo para el contenedor de nombre, precio y juego */
 .nombre2 {

@@ -78,9 +78,6 @@ div[class^='item']:hover{
     margin-left: 5px;
     margin-top: 5px;
 }
-.container3{
-  
-}
 
 .descripcion{
     display: flex;
