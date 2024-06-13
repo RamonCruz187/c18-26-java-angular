@@ -16,6 +16,7 @@ body {
 }
 
 .logo {
+    cursor: pointer;
     font-size: 24px;
     font-weight: bold;
 }
@@ -156,6 +157,8 @@ body {
 .carrito {
     width: 30px;
     height: 30px;
+    margin-right: 50px
+
 }
 
 .icon-item {
@@ -215,6 +218,17 @@ body {
         text-align: left;
         margin-left: 20px;
     }
+
+
+    .perfil,
+    .carrito {
+        width: 30px;
+        height: 30px;
+        margin-right: 0px
+    
+    }
+    
+
 }
 
 /* Specific adjustments for the right alignment of dropdown menus */

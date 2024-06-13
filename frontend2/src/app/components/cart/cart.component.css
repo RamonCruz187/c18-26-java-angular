@@ -16,21 +16,7 @@ body {
     margin-bottom: 30px;
 
 }
-.circulo{
 
-    padding-top: 5px;
-    text-align: center;
-    width: 30px;
-    height: 30px;
-    background-color: #D72323;
-    color:#f9f8f8;
-    box-sizing: border-box;
-    border-color: #d72323;
-    border-radius: 200px;   
-    margin-left: 10px;
-    top: 50%;   
-    
-}
 #img{  
 
     width: 40%;   
@@ -38,7 +24,8 @@ body {
 }
 #descr{
    width: 80%;
-    gap:2px
+    gap:2px;
+    font-family: "Poppins",sans-serif;
 }
 .img-desc{
     display: flex;
@@ -47,18 +34,17 @@ body {
 .carrito {
     font-size: 30px;
     font-weight: bold;
-    font-family: "Popins",sans-serif;
-    margin-left: 380px;
-     
+    font-family: "Poppins",sans-serif;
+    margin-left: 250px;     
     
- }
+}
   
   /* Table Container */
 .table-container {
     width: 60%;
     max-width: 800px;
     margin: 0 auto; 
-     
+       
    
   
 }
@@ -68,8 +54,7 @@ body {
 .table {
     width: 100%;   
     margin-bottom: 20px;
-    border-collapse: collapse;
-    border-radius: 15px;
+    border-collapse: collapse;    
     background-color:rgba(255, 231, 231, 1);
     padding: 20px;
     
@@ -80,6 +65,7 @@ body {
 .thead {
     padding-bottom: 10px;
     margin-bottom: 30px;
+
        
 }
   
@@ -92,14 +78,16 @@ body {
    
     padding: 10px 25px;
     text-align: left;
-    background-color: rgba(255, 231, 231, 1);   
+    background-color: rgba(255, 231, 231, 1); 
+    font-family: "Poppins",sans-serif;  
     
 }
 .recuadro3 {  
    
     padding: 10px 25px 10px 50px;
     text-align: left;
-    background-color: rgba(255, 231, 231, 1); 
+    background-color: rgba(255, 231, 231, 1);
+    font-family: "Poppins",sans-serif; 
      
     
 }
@@ -116,8 +104,7 @@ body {
 td{
     text-align: center;    
     padding:30px;
-    
-   
+      
 }
    
 .quantity-control{
@@ -154,38 +141,43 @@ td{
     border-radius: 20px;
     padding: 5px 10px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 14px;    
     flex-wrap: wrap;
 
   }
   
 .button:hover {
     background-color: #cc0000; /* Darker red on hover */
-  }
+}
 .eliminar{
     border:none;
     background: none;
+    font-size: larger;
 } 
 h4{
-    font-size: 30px;
-    font-family: "Poppins";
+    font-size: 25px;
+    font-family: "Poppins",sans-serif;
     font-weight: bold;
 
 }
 h5{
     font-size: 15px;
+    font-family: "Poppins",sans-serif;
 }
 .demora{
     font-size: 50px;
+    font-family: "Poppins",sans-serif;
 }
 #dias{
     margin-left: 14px;
+    font-family: "Poppins",sans-serif;
 }
 .total{
     margin-top: 20px;
     margin-right: 150px;
     display: flex;
     justify-content: flex-end;
+    font-family: "Poppins",sans-serif;
     font-weight: bolder;
     font-size: 20px;
 }
@@ -196,18 +188,21 @@ h5{
      margin-bottom: 10px;
      display: flex;
      flex-wrap: wrap;
-     gap:130px;
+     gap:120px;
      height: 80px;
+     font-family: "Poppins",sans-serif;
 }
 .borde2{
     border-bottom: 2px solid  #551010;
     margin-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
-    gap:130px;
+    gap:123px;
     height: 100px;
+    font-family: "Poppins",sans-serif;
 }
 .button3{
+    font-family: "Poppins",sans-serif;
     display: flex;
     display: block;
     color:#D72323;
@@ -225,6 +220,7 @@ h5{
     
 
 .button3:hover{
+    font-family: "Poppins",sans-serif;
     color: #fff; 
     background-color: #D72323;
 }

@@ -30,13 +30,14 @@
     <div class="product-price">
       ${{ product.price }}
     </div>
-    <div class="product-description">
+    <div class="product-description">{{ product.description}} : <br>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum.
-      <br><br>
-      <p *ngIf="product.active">Este producto está activo</p>
-      <p *ngIf="!product.active">Este producto no está activo</p>
     </div>
+    <p *ngIf="product.active">Este producto está activo</p>
+    <p *ngIf="!product.active">Este producto no está activo</p>
     <br>
+
+    
     <div class="product-stock">
       <span>(Stock: {{ product.stock }} Unidades)</span>
     </div>
@@ -44,6 +45,7 @@
       <button (click)="addToCart()" class="btn-add-to-cart">Añadir al Carrito</button>
       <button class="btn-add-to-wishlist">Añadir a Lista de Deseados</button>
     </div>
+   
   </div>
 </div>
 

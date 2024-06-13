@@ -27,16 +27,16 @@
 </div>
 
 <div class="categorias">
-    <div class="categoria">    <img src="https://res.cloudinary.com/dfulftofe/image/upload/v1717937029/Rectangle_626hei_ht0zrf.png" alt="">
+    <div class="categoria" routerLink="/catalogo/COLECCIONABLE">  <img src="https://res.cloudinary.com/dfulftofe/image/upload/v1717937029/Rectangle_626hei_ht0zrf.png" alt="">
         <div class="nombre">Coleccionables</div>
     </div>
-    <div class="categoria">    <img src="https://res.cloudinary.com/dfulftofe/image/upload/v1717953757/Group_388_kgxlw4.png" alt="">
+    <div class="categoria" routerLink="/catalogo/JUGUETE">    <img src="https://res.cloudinary.com/dfulftofe/image/upload/v1717953757/Group_388_kgxlw4.png" alt="">
         <div class="nombre">Juguetes</div>
     </div>
-    <div class="categoria">    <img src="https://res.cloudinary.com/dfulftofe/image/upload/v1717954053/Group_389_z4hgms.png" alt="">
+    <div class="categoria" routerLink="/catalogo/OFICINA">    <img src="https://res.cloudinary.com/dfulftofe/image/upload/v1717954053/Group_389_z4hgms.png" alt="">
         <div class="nombre">Oficina</div>
     </div>
-    <div class="categoria">    <img src="https://res.cloudinary.com/dfulftofe/image/upload/v1717954212/Group_390_vvvtfa.png" alt="">
+    <div class="categoria" routerLink="/catalogo/HOGAR">    <img src="https://res.cloudinary.com/dfulftofe/image/upload/v1717954212/Group_390_vvvtfa.png" alt="">
         <div class="nombre">Hogar</div>
     </div>
 </div>
@@ -69,7 +69,7 @@
                 <span class="precio">${{item.price}}</span>
             </div>
             <span class="juego">{{item.coleccionable}}</span>
-            <input type="button" value="Comprar">
+            <input type="button" routerLink="/product/{{item.id}}" value="Comprar">
         </div>
     </div>
     <button class="nav-button next" (click)="nextItem()">&#8250;</button>
