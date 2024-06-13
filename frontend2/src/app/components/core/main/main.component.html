@@ -68,8 +68,9 @@
                 <span class="name">{{item.name}}</span>
                 <span class="precio">${{item.price}}</span>
             </div>
-            <span class="juego">{{item.coleccionable}}</span>
+            <div class="botoncito">
             <input type="button" routerLink="/product/{{item.id}}" value="Comprar">
+            </div>
         </div>
     </div>
     <button class="nav-button next" (click)="nextItem()">&#8250;</button>

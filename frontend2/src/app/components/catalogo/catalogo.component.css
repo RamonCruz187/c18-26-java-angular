@@ -331,7 +331,18 @@ input[type="button"]:hover {
     }
   }
 
+.nohay{
+    font-family: "Poppins", sans-serif;
+    font-style: bold;
+    color: #000000;
+    display: block;
+    font-weight: 600;
+    font-size: 24px;
+    color: #861919;
+    text-align: center;
+    margin:11%;
 
+}
 
   .banner3-image {
     display: flex;
@@ -343,6 +354,8 @@ input[type="button"]:hover {
 }
 
 .banner3-image img {
+    opacity: 0.9; /* 50% de opacidad */
+
     margin: 50px;
     filter: invert(0.5) brightness(0.3); /* Ajusta el filtro para teñir la imagen de un gris muy oscuro */
     height: auto; /* Mantiene la proporción de la imagen */
