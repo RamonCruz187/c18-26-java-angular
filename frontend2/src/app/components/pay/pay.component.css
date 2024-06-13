@@ -1,14 +1,23 @@
 .payment-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    
     margin: 20px;
 }
 .payment-selection, .order-details {
-    width: 48%;
+    width: 38%;
+    
+}
+.payment-btn{
+   color: #D72323
 }
   
 h2 {
     font-size: 1.5rem;
+    font-family: "Poppins",sans-serif;
+}
+h3{
+    font-family: "Poppins",sans-serif; 
 }
   
 .payment-buttons {
@@ -22,13 +31,24 @@ h2 {
     border: 1px solid #d40000;
     border-radius: 20px;
     background-color: white;
-    color: #d40000;
+    font-family: "Poppins",sans-serif;
+    color: #D72323;
     cursor: pointer;
+}
+.btn:hover{
+    background-color: #D72323;
+    color:#ffffff /* Darker red on hover */
 }
   
 .btn.selected {
-    background-color: #d40000;
-    color: white;
+    border: 1px solid #cc0000;
+    background-color: #fff;
+    color: #D72323;
+    cursor: pointer;
+}
+.btn.selected:hover {
+    background-color: #D72323;
+    color:#ffffff /* Darker red on hover */
 }
   
 hr {
@@ -63,27 +83,35 @@ hr {
 .select-btn {
     background-color: white;
     border: 1px solid #d40000;
-    color: #d40000;
+    color: #D72323;
+    cursor: pointer;
     border-radius: 20px;
     padding: 5px 10px;
 }
   
 .confirm-btn {
-    background-color: #d40000;
-    color: white;
-    border: none;
+    background-color:#fff;    
+    border: 1px solid #d40000;
+    color:#d40000;   
     border-radius: 20px;
     padding: 10px 20px;
     cursor: pointer;
+    font-family: "Poppins",sans-serif;
+}
+  
+.confirm-btn:hover {
+    background-color: #cc0000;
+    color:#ffffff /* Darker red on hover */
 }
   
 .form-group {
     margin-bottom: 10px;
+    font-family: "Poppins",sans-serif;
 }
   
 .form-row {
     display: flex;
-    gap: 10px;
+    gap: 30px;
 }
   
 input[type="text"], input[type="checkbox"] {
@@ -105,6 +133,8 @@ label {
   .order-details table {
     width: 100%;
     border-collapse: collapse;
+    background-color: rgba(255, 231, 231, 1); 
+    font-family: "Poppins",sans-serif;
   }
   
   .order-details td {
@@ -113,7 +143,7 @@ label {
   
   .final-btn {
     display: block;
-    margin: 20px auto;
+    margin: 60px auto;
     padding: 10px 40px;
   }
   
