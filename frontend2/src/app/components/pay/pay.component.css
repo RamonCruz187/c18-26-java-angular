@@ -1,0 +1,119 @@
+.payment-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+.payment-selection, .order-details {
+    width: 48%;
+}
+  
+h2 {
+    font-size: 1.5rem;
+}
+  
+.payment-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+  
+.btn {
+    padding: 10px 20px;
+    border: 1px solid #d40000;
+    border-radius: 20px;
+    background-color: white;
+    color: #d40000;
+    cursor: pointer;
+}
+  
+.btn.selected {
+    background-color: #d40000;
+    color: white;
+}
+  
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+  
+.payment-table .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+  
+.card-icon img {
+    width: 40px;
+}
+  
+.card-number {
+    flex: 1;
+    margin-left: 10px;
+}
+  
+.card-expiry {
+    margin-right: 10px;
+}
+  
+.select-btn {
+    background-color: white;
+    border: 1px solid #d40000;
+    color: #d40000;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+  
+.confirm-btn {
+    background-color: #d40000;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+  
+.form-group {
+    margin-bottom: 10px;
+}
+  
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+  
+input[type="text"], input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d40000;
+    border-radius: 5px;
+}
+  
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+  
+  input[type="checkbox"] {
+    width: auto;
+  }
+  
+  .order-details table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .order-details td {
+    padding: 10px;
+  }
+  
+  .final-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 40px;
+  }
+  

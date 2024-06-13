@@ -17,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CatalogoComponent } from './components/catalogo/catalogo.component';
 import { RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'login', component: LoginComponent },
@@ -39,7 +40,8 @@ const routes: Routes = [
     CartComponent,
     PayComponent,
     ProfileComponent,
-    CatalogoComponent
+    CatalogoComponent,
+    PayComponent
   ],
   imports: [
     BrowserModule,
