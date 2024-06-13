@@ -13,59 +13,60 @@
 
 
 <div class="banner">
-    <p class="titulo">Coleccionables</p>    
+    <img src="https://res.cloudinary.com/dfulftofe/image/upload/v1718282962/Group_405_l2a0bd.png" alt="">
+    <p class="titulo"> Coleccionables</p>    
 </div>
 
 <div class="container1">    
-<div class="volver">Inicio/Coleccionables</div>    
-<div class="filter"><img src="/assets/img/filtro.png" alt="Filtrar"></div>
-
+    <div class="volver">Inicio/Coleccionables/</div>    
+    <div class="filter"><img src="/assets/img/filtro.png" alt="Filtrar"></div>
 </div>
+
+
 <div *ngIf="productos.length === 0">
     No hay productos para mostrar.
 </div>
-    <div class= "container2" *ngIf="productos.length > 0">
-        <div class="flex1" *ngFor="let producto of productos">
-         <div class="item1">
-             <div >
-                 <div class ="card"><a href="javascript:void(0)"  (click)="goToProduct(producto.id)" class="img"><img [src]="producto.image"></a></div>
-                 <div class="container">
-                 <div class="descripcion">
-                     <span class="name">{{producto.name}}</span>
-                     <span class="name">{{producto.coleccionable}}</span>                     
-                     <span class="precio">${{producto.price}}</span>                                       
-                     <input type="button" value="Comprar" (click)="addToCart(producto.id)">
-                    </div> 
-                 </div>
+
+
+<div class="container2" *ngIf="productos.length > 0">
+    <div class="flex1" *ngFor="let producto of productos">
+        <div class="item1" (click)="goToProduct(producto.id)">
+            <div class="card">
+             <div class="cardimg">
+                <a href="javascript:void(0)" class="img">
+                    <img [src]="producto.image">
+                </a>
              </div>
-         </div>  
-       </div>          
-     </div> 
-
-<div>
-    <div class= "container">
-        <div class="flex2">
-        <div class="circulo" id="espacio1"><img src="/assets/img/flecha.png" alt="flecha"></div>        
-        <div class="circulo" id="espacio">1</div>        
-        <div class="circulo1" id="espacio">2</div>
-        <div class="circulo1" id="espacio">3</div>
-        <div class="circulo"><img src="/assets/img/flecha.png" alt="flecha"></div>    
-        
-     </div>   
+            </div>
+            <div class="descripcion">
+                <span class="name">{{producto.name}}</span>
+                <span class="name">{{producto.coleccionable}}</span>
+                <span class="precio">${{producto.price}}</span>
+                <input type="button" value="Comprar" (click)="addToCart(producto.id)">
+            </div>
+        </div>
+    </div>
 </div>
-     <div class="container flex">    
-       
-        <div class="invert-image"><img src="/assets/img/Lego (1).png" alt="" id="marca"></div>
-        <div class="invert-image"><img src="/assets/img/929827 copia.png" alt="" id="marca"></div>
-        <div class="invert-image"><img src="/assets/img/Need.png" alt="" id="marca"></div>
-        <div class="invert-image"><img src="/assets/img/fifa.png" alt="" id="marca"></div>
-        <div class="invert-image"><img src="/assets/img/sonic.png" alt="" id="marca"></div>
-        <div class="invert-image"><img src="/assets/img/pokemon.png" alt="" id="marca"></div>
-        <div class="invert-image"><img src="/assets/img/fortnite.png" alt="" id="marca"></div>
-        <div class="invert-image"><img src="/assets/img/mario.png" alt="" id="marca"></div>
-        <div class="invert-image"><img src="/assets/img/Sims.png" alt="" id="marca"></div>           
 
-     </div>
+
+
+<div class="container">
+    <div class="pagination">
+        <div class="circle arrow" id="prev"><i class="fas fa-chevron-left"></i></div>        
+        <div class="circle number" id="page1" data-page="1">1</div>        
+        <div class="circle number" id="page2" data-page="2">2</div>
+        <div class="circle number" id="page3" data-page="3">3</div>
+        <div class="circle number" id="page4" data-page="4">4</div>
+        <div class="circle number" id="page5" data-page="5">5</div>
+        <div class="circle arrow" id="next"><i class="fas fa-chevron-right"></i></div>    
+    </div>   
+</div>
+  
+
+ <div class="banner3-image">
+    <img src="https://res.cloudinary.com/dfulftofe/image/upload/v1718287562/Group_371_1_ogeoyw.png" alt="Footer Image">
+  </div>
+
     <script>
         document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>

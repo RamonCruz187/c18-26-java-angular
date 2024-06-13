@@ -542,6 +542,7 @@ body {
     transition: font-size 0.3s, height 0.3s, padding 0.3s;
 }
 
+
 /* Media Queries for Responsiveness */
 @media (max-width: 1424px) {
     .categorias {
