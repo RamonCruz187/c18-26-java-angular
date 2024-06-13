@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ShoppingCart } from '../model/ShoppingCart';
 
 @Injectable({
   providedIn: 'root'
@@ -40,6 +41,13 @@ export class HttpServiceService {
   login(body: any): Observable<any> {
     console.log("Login funciona");
     return this.http.post(this.deployUrl+'/auth/login',body);
+    
+  }
+
+  sendCart(cart: ShoppingCart): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    console.log("Pago funciona");
+    return this.http.post(this.deployUrl+'/cart/2',cart, { headers });
     
   }
 

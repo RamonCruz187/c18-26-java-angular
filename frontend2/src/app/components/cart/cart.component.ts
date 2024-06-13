@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CartItem } from 'src/app/model/cart-item';
 import { CartService } from 'src/app/services/cart.service';
 
@@ -20,7 +21,7 @@ export class CartComponent implements OnInit {
   }
   
   
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private router :Router) { }
   
   ngOnInit(): void {
     const items =this.getCartFromLocalStorage();
@@ -46,6 +47,10 @@ export class CartComponent implements OnInit {
   getTotalPrice(): number {
     this.precioTotal= this.cartItems.reduce((total, item) => total + item.product.price * item.quantity, 0);
     return this.precioTotal;
+  }
+
+  goToPay(){
+    this.router.navigate(['/pay']);
   }
 
   

@@ -1,1 +1,31 @@
+
+<app-nav-bar></app-nav-bar>
 <p>pay works!</p>
+<table class="table" >
+    
+    <tbody>
+      <tr *ngFor="let product of cart$ | async; let i = index"  class="linea">
+        
+        <td ><div >{{ product.product.name }}"x 1"</div></td>
+         
+        <td>{{ product.product.price }}</td>
+      
+      </tr>
+      <tr>
+        <td>Envio:</td>
+        <td>200</td>
+      </tr>
+      <tr>
+        <td>Total</td>
+        <td>{{ getTotalPrice()+200 | currency }}</td>
+      </tr>
+
+    </tbody>
+    <h4></h4>   
+  </table>
+
+  <button (click)="sendCartToBackend()">Confirmar y pagar</button>
+
+
+
+<app-footer></app-footer>

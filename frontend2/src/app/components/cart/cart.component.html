@@ -48,7 +48,7 @@
   <div class="total"><h3>Total: {{ getTotalPrice() | currency }}</h3></div>
   <div class="container">
   <button (click)="clearCart()" class="button3">Seguir comprando</button><!--seguir comprando-->  
-  <button class="button3" >Pagar</button>
+  <button class="button3" (click)="goToPay()" >Pagar</button>
  
   </div>
 </div>
