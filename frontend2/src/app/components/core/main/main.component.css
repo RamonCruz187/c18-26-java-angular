@@ -826,14 +826,14 @@ input[type="button"] {
     align-self: center;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #FFB6B6;
+    background-color: #f87575;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .nombre2 input[type="button"]:hover {
-    background-color: #FF7F7F;
+    background-color: #fc5050;
 }
 
 /* Estilo para el elemento seleccionado */
