@@ -104,12 +104,11 @@ Características Principales
 
 #### 👉🏻 Desarrolladores 👨🏻‍💻
 
-| <img src="https://media.licdn.com/dms/image/D4D03AQF6xGOtBG09hw/profile-displayphoto-shrink_800_800/0/1712960997420?e=1723680000&v=beta&t=gVXxdIWatz2HvUhz2nr2kpT3CVJjPn8KMcQ_6gcCeeM" width=100>| 
-|:-:|:-:|:-:|
+| <img src="https://media.licdn.com/dms/image/D4D03AQF6xGOtBG09hw/profile-displayphoto-shrink_800_800/0/1712960997420?e=1723680000&v=beta&t=gVXxdIWatz2HvUhz2nr2kpT3CVJjPn8KMcQ_6gcCeeM" width=100>|
+|:-:|
 | **Osvaldo Deleglise**|
-| <a href="https://www.linkedin.com/in/osvaldo-deleglise-87a6492ba/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-
-
+| <a href="https://www.linkedin.com/in/osvaldo-deleglise-87a6492ba/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> |
+| <a href="#"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a> |
 <br>
 
 ## ✔ Testing 

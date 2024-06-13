@@ -22,8 +22,8 @@ export class PayComponent implements OnInit{
     saveCard: false
   };
   savedCards = [
-    { icon: 'assets/visa.png', number: 'XXXX-XXXX-XXXX-9010', expiry: '12/28' },
-    { icon: 'assets/mastercard.png', number: 'XXXX-XXXX-XXXX-3450', expiry: '11/26' }
+    { icon: 'assets/img/Visa.png', number: 'XXXX-XXXX-XXXX-9010', expiry: '12/28' },
+    { icon: 'assets/img/MasterCard.png', number: 'XXXX-XXXX-XXXX-3450', expiry: '11/26' }
   ];
   orderItems = [
     { name: 'Pikachu - Funko x 1', price: 25 },

@@ -38,6 +38,7 @@ export class ProductComponent {
 
 addToCart(): void {
  this.cartService.addToCart(this.cartItems);
+ alert("Producto añadido al carrito!");
 }
 
 

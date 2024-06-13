@@ -44,6 +44,11 @@ export class CartComponent implements OnInit {
     this.cartService.clearCart();
   }
 
+  goHome() {
+    this.router.navigate(['/']);
+    
+  }
+
   getTotalPrice(): number {
     this.precioTotal= this.cartItems.reduce((total, item) => total + item.product.price * item.quantity, 0);
     return this.precioTotal;
