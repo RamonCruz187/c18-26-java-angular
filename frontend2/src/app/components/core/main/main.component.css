@@ -804,18 +804,39 @@ input[type="button"] {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    height: 65%;
     align-items: center;
     margin-bottom: 10px;
     text-align: left;
 }
+.botoncito{
+    height: 35%;
+
+}
 
 .nombre2 .name {
     width: 60%; /* Ocupa el 50% del espacio */
+    display: block;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+
+    font-size: 22px;
+    color: #181818;
+
 }
 
 .nombre2 .precio {
     width: 20%; /* El 30% restante */
-    margin-left: 20px; /* Añadimos un espacio de margen entre name y precio */
+    font-family: "Poppins", sans-serif;
+    font-style: bold;
+    color: #000000;
+    display: block;
+    font-weight: 600;
+    font-size: 24px;
+    color: #861919;
+   
+
 }
 
 .nombre2 .juego {
@@ -824,17 +845,26 @@ input[type="button"] {
 }
 
 .nombre2 input[type="button"] {
-    align-self: center;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #f87575;
+    color: white;
     border: none;
-    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    align-self: center;
+    background-color: hsl(0, 95%, 62%);
+    border: none;
+    border-radius: 100px;
     cursor: pointer;
 }
 
+input[type="button"]:hover {
+    background-color: #f87575;
+}
+
 .nombre2 input[type="button"]:hover {
-    background-color: #fc5050;
+    background-color: #f87575;
 }
 
 /* Estilo para el elemento seleccionado */

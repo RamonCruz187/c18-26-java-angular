@@ -23,9 +23,10 @@
 </div>
 
 
-<div *ngIf="productos.length === 0">
-    No hay productos para mostrar.
+<div  *ngIf="productos.length === 0">
+   <h1 class="nohay" > No hay productos para mostrar.</h1>
 </div>
+
 
 
 <div class="container2" *ngIf="productos.length > 0">
@@ -50,7 +51,7 @@
 
 
 
-<div class="container">
+<div class="container" *ngIf="productos.length > 0">
     <div class="pagination">
         <div class="circle arrow" id="prev"><i class="fas fa-chevron-left"></i></div>        
         <div class="circle number" id="page1" data-page="1">1</div>        
@@ -61,7 +62,6 @@
         <div class="circle arrow" id="next"><i class="fas fa-chevron-right"></i></div>    
     </div>   
 </div>
-  
 
  <div class="banner3-image">
     <img src="https://res.cloudinary.com/dfulftofe/image/upload/v1718287562/Group_371_1_ogeoyw.png" alt="Footer Image">
