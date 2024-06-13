@@ -9,7 +9,7 @@
       
       <hr>
       
-      <div *ngIf="selectedPaymentMethod === 'credit-debit'" class="payment-table">
+      <div  class="payment-table">
         <div class="card" *ngFor="let card of savedCards">
           <span class="card-icon"><img [src]="card.icon" alt="Card Icon"></span>
           <span class="card-number">{{ card.number }}</span>
@@ -18,32 +18,32 @@
         </div>
         
         <h3>Agregar tarjeta nueva</h3>
-        <!-- <form (ngSubmit)="submitCardDetails()">
+        <form (ngSubmit)="submitCardDetails()">
           <div class="form-group">
             <label for="cardNumber">Número</label>
-            <input type="text" id="cardNumber" name="cardNumber" [(ngModel)]="cardDetails.cardNumber" required>
+            <input type="text" id="cardNumber" name="cardNumber"  required>
           </div>
           <div class="form-group">
             <label for="cardHolder">Titular de la tarjeta</label>
-            <input type="text" id="cardHolder" name="cardHolder" [(ngModel)]="cardDetails.cardHolder" required>
+            <input type="text" id="cardHolder" name="cardHolder"  required>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label for="expiryDate">Vencimiento</label>
-              <input type="text" id="expiryDate" name="expiryDate" [(ngModel)]="cardDetails.expiryDate" required placeholder="MM / YY">
+              <input type="text" id="expiryDate" name="expiryDate"  required placeholder="MM / YY">
             </div>
             <div class="form-group">
               <label for="cvv">CVC</label>
-              <input type="text" id="cvv" name="cvv" [(ngModel)]="cardDetails.cvv" required>
+              <input type="text" id="cvv" name="cvv"  required>
             </div>
           </div>
           <div class="form-group">
             <label>
-              <input type="checkbox" [(ngModel)]="cardDetails.saveCard" name="saveCard"> Guardar tarjeta
+              <input type="checkbox"  name="saveCard"> Guardar tarjeta
             </label>
           </div>
           <button type="submit" class="btn confirm-btn">Registrar Tarjeta</button>
-        </form> -->
+        </form>
       </div>
     </div>
   
@@ -62,7 +62,7 @@
           
           </tr>
           <tr>
-            <td>Envio:</td>
+            <td>Envío:</td>
             <td>200</td>
           </tr>
           <tr>

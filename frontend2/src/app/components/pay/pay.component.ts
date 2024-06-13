@@ -85,6 +85,9 @@ export class PayComponent implements OnInit{
     const cart = this.getCarritoFromLocalStorage();
        this.httpService.sendCart(cart).subscribe(response => {
       console.log('Carrito enviado con éxito', response);
+      this.cartService.clearCart();
+      alert('Compra realizada con éxito. En un momento le enviaremos un mail con los datos de envío.');
+      this.router.navigate(['/']);
      
     }, error => {
       console.error('Error al enviar el carrito', error);
