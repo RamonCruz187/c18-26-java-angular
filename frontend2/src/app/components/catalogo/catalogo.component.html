@@ -31,11 +31,11 @@
 
 <div class="container2" *ngIf="productos.length > 0">
     <div class="flex1" *ngFor="let producto of productos">
-        <div class="item1" (click)="goToProduct(producto.id)">
+        <div class="item1" >
             <div class="card">
              <div class="cardimg">
                 <a href="javascript:void(0)" class="img">
-                    <img [src]="producto.image">
+                    <img [src]="producto.image" (click)="goToProduct(producto.id)">
                 </a>
              </div>
             </div>
