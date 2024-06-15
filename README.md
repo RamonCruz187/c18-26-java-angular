@@ -62,7 +62,6 @@ Características Principales
 #### 👉🏻 Documentación 📜
 
 - Puedes leer la documentación de la API: <a href="https://energetic-hope-production.up.railway.app/swagger-ui/index.html" target="_blank">Aqui</a>.
-- Tablero de Jira: <a href="https://virginiadanitz-1715966829669.atlassian.net/jira/software/projects/EC/list" target="_blank">Aqui</a>.
 
 #### 👉🏻 Construida con 🛠️
 
@@ -119,6 +118,10 @@ Características Principales
 - Pruebas de diseño e integración.
 - Pruebas de los endpoints de la API REST.
 - Pruebas de los componentes del front-end e integración con el back-end.
+
+#### 👉🏻 Documentación 📜
+
+- Puedes leer la documentación del Jira: <a href="https://virginiadanitz-1715966829669.atlassian.net/jira/software/projects/EC/boards/2" target="_blank">Aqui</a>.
 
 #### 👉🏻 Testeado con 🛠️
 
