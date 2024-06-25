@@ -129,7 +129,7 @@ Características Principales
 
 #### 👉🏻 Testers 👨🏻‍💻
 
-| <img src="https://media.licdn.com/dms/image/D4D35AQEaTfik1hdZIg/profile-framedphoto-shrink_800_800/0/1709644252485?e=1718892000&v=beta&t=34UiWk3aJ5HWhTXB17oHLQRp0BtxoYBDe7qfBUVNFz4" width=100>|
+| <img src="https://media.licdn.com/dms/image/D4D03AQGlOH3tDd20Zg/profile-displayphoto-shrink_400_400/0/1679316358970?e=1724889600&v=beta&t=pUeplZXLfubUBtJSMVu1Q7_OrSOXXjOtlTrPlEyzpgU" width=100>|
 |:-:|
 | **Virginia Danitz**|
 | <a href="https://www.linkedin.com/in/virginia-danitz-923a5a19/"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> |
